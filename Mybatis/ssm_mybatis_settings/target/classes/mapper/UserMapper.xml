@@ -6,12 +6,27 @@
 namespace:命名空间规则，具有唯一性。可以自己命名，但建议与Dao接口的全限定类名一致
 -->
 <mapper namespace="com.cshbxy.mapper.UserMapper">
-    <select id="selectAll" resultType="com.cshbxy.pojo.User">
-        select * from users
-    </select>
-    <select id="selectById" parameterType="int" resultType="com.cshbxy.pojo.User">
+    <!--    查询所有记录-->
+    <select id="selectAll" resultType="user">
         select *
-        from users
+        from mybatis.users
+    </select>
+    <!--    按id查询-->
+    <select id="selectById" parameterType="int" resultType="user">
+        select *
+        from mybatis.users
         where uid = #{uid}
+    </select>
+    <!--    按id及姓名查询。如果传入多个参数，依序分别用#{arg0}、#{arg1}……表示-->
+    <select id="selectByIdName" resultType="user">
+        select *
+        from mybatis.users
+        where uid = #{arg0}
+          and uname = #{arg1}
+    </select>
+    <select id="selectByName" resultType="user">
+        select *
+        from mybatis.users
+        where uname like concat('%', #{uname}, '%')
     </select>
 </mapper>

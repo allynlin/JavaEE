@@ -22,12 +22,22 @@ public class TestUserMapper {
 //        利用SqlSession对象生成一个已实现的接口对象
         UserMapper mapper = sqlSession.getMapper(UserMapper.class);
         List<User> users = mapper.selectAll();
-        for (User user:users){
+        for (User user : users) {
             System.out.println(user);
         }
         System.out.println("====================================");
-        User user = mapper.selectById(2);
+        User user = mapper.selectById(3);
         System.out.println(user);
+        System.out.println("====================================");
+        users=mapper.selectByIdName(2,"李四");
+        for (User user1:users){
+            System.out.println(user1);
+        }
+        System.out.println("====================================");
+        users=mapper.selectByName("李");
+        for (User user2:users){
+            System.out.println(user2);
+        }
 //        关闭会话对象
         sqlSession.close();
     }
