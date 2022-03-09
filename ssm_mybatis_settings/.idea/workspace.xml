@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4359108-895a-478d-9adb-9cfb7e8757bc" name="变更" comment="">
+      <change afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/sqldialects.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/src/main/java/com/cshbxy/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/src/main/java/com/cshbxy/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/target/classes/com/cshbxy/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/target/classes/com/cshbxy/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ssm_mybatis/target/test-classes/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/target/test-classes/MyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cshbxy/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/src/main/java/com/cshbxy/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/src/main/java/com/cshbxy/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/src/main/resources/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/src/test/java/TestUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/target/classes/com/cshbxy/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/target/classes/com/cshbxy/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/target/classes/db.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/TestUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Mybatis/ssm_mybatis_settings/target/test-classes/TestUserMapper.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="267rtJ6pP5Df75z3CaQ5xyO7X3w" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Mybatis" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java EE\Mybatis" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="d4359108-895a-478d-9adb-9cfb7e8757bc" name="变更" comment="" />
+      <created>1646785682910</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1646785682910</updated>
+      <workItem from="1646785690811" duration="405000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
