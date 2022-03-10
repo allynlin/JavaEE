@@ -65,15 +65,16 @@ public class TestUserMapper {
         user1.setUid(5);
         user1.setUname("李好好");
         user1.setUage(22);
-        int n=mapper.add(user1);
+        int n = mapper.add(user1);
         if (n != 0) {
             System.out.println("成功");
         }
         sqlSession.commit();//提交事务
         sqlSession.close();
     }
+
     @Test
-    public void test03() throws IOException{
+    public void test03() throws IOException {
         //        获取核心配置文件流
         InputStream in = Resources.getResourceAsStream("mybatis-config.xml");
 //        构建会话工厂
@@ -86,15 +87,16 @@ public class TestUserMapper {
         user.setUid(5);
         user.setUage(30);
         user.setUname("刘好好");
-        int n=mapper.update(user);
+        int n = mapper.update(user);
         if (n != 0) {
             System.out.println("成功");
         }
         sqlSession.commit();//提交事务
         sqlSession.close();
     }
+
     @Test
-    public void test04() throws IOException{
+    public void test04() throws IOException {
         //        获取核心配置文件流
         InputStream in = Resources.getResourceAsStream("mybatis-config.xml");
 //        构建会话工厂
@@ -107,7 +109,7 @@ public class TestUserMapper {
 //        user.setUid(5);
 //        user.setUage(30);
 //        user.setUname("刘好好");
-        int n=mapper.deleteById(5);
+        int n = mapper.deleteById(5);
         if (n != 0) {
             System.out.println("成功");
         }
