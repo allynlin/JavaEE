@@ -39,15 +39,7 @@ namespace:命名空间规则，具有唯一性。可以自己命名，但建议�
     <insert id="add">
         insert mybatis.users (uid, uname, uage) value (#{uid}, #{uname}, #{uage})
     </insert>
-    <update id="update">
-        update mybatis.users
-        set uname=#{uname},
-        uage=#{uage}
-        where uid = #{uid}
-    </update>
-    <delete id="deleteById">
-        delete
-        from mybatis.users
-        where uid = #{uid}
-    </delete>
+    <insert id="update">
+        uo
+    </insert>
 </mapper>
