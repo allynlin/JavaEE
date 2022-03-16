@@ -9,6 +9,8 @@ public interface EmployeeMapper {
     //    添加记录
     int add(Employee employee);
 
+    int autoadd(Employee employee);
+
     //    按id修改记录
     int update(Employee employee);
 
