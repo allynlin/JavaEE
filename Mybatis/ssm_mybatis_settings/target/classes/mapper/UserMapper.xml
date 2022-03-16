@@ -42,7 +42,7 @@ namespace:命名空间规则，具有唯一性。可以自己命名，但建议�
     <update id="update">
         update mybatis.users
         set uname=#{uname},
-        uage=#{uage}
+            uage=#{uage}
         where uid = #{uid}
     </update>
     <delete id="deleteById">

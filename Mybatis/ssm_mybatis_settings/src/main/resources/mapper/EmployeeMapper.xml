@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+namespace:命名空间规则，具有唯一性。可以自己命名，但建议与Dao接口的全限定类名一致
+-->
+<mapper namespace="com.cshbxy.mapper.EmployeeMapper">
+    <!--    按id查询-->
+    <select id="selectById" resultType="employee">
+        select *
+        from mybatis.employee
+        where id = #{id}
+    </select>
+    <insert id="add">
+        insert mybatis.employee (id, name, age,position) value (#{id}, #{name}, #{age},#{position})
+    </insert>
+    <update id="update">
+        update mybatis.employee
+        set name=#{name},
+            age=#{age},
+            position=#{position}
+        where id = #{id}
+    </update>
+    <delete id="deleteById">
+        delete
+        from mybatis.employee
+        where id = #{id}
+    </delete>
+</mapper>

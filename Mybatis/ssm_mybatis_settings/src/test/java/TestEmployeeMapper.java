@@ -1,5 +1,5 @@
-import com.cshbxy.mapper.UserMapper;
-import com.cshbxy.pojo.User;
+import com.cshbxy.mapper.EmployeeMapper;
+import com.cshbxy.pojo.Employee;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -8,10 +8,8 @@ import org.junit.Test;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
-import java.util.Random;
 
-public class TestUserMapper {
+public class TestEmployeeMapper {
     @Test
     public void test() throws IOException {
 //        获取核心配置文件流
@@ -21,15 +19,10 @@ public class TestUserMapper {
 //        构建SqlSession对象
         SqlSession sqlSession = factory.openSession();
 //        利用SqlSession对象生成一个已实现的接口对象
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
 //        按ID查询
-//        int min = 1; // 定义随机数的最小值
-//        int max = 3; // 定义随机数的最大值
-        // 产生一个2~100的数
-        int s = 1+(int) (Math.random() * 3);
-        System.out.println(s);
-        User user = mapper.selectById(s);
-        System.out.println(user);
+        Employee employee=mapper.selectById(2);
+        System.out.println(employee);
 //        关闭会话对象
         sqlSession.close();
     }
@@ -43,13 +36,13 @@ public class TestUserMapper {
 //        构建SqlSession对象
         SqlSession sqlSession = factory.openSession();
 //        利用SqlSession对象生成一个已实现的接口对象
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user1 = new User();
-        user1.setId(5);
-        user1.setName("李好好");
-        user1.setAge(22);
-        user1.setPosition("经理");
-        int n = mapper.add(user1);
+        EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
+        Employee employee = new Employee();
+        employee.setId(5);
+        employee.setName("李好好");
+        employee.setAge(22);
+        employee.setPosition("经理");
+        int n = mapper.add(employee);
         if (n != 0) {
             System.out.println("成功");
         }
@@ -66,13 +59,13 @@ public class TestUserMapper {
 //        构建SqlSession对象
         SqlSession sqlSession = factory.openSession();
 //        利用SqlSession对象生成一个已实现的接口对象
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
-        User user = new User();
-        user.setId(5);
-        user.setAge(30);
-        user.setName("刘好好");
-        user.setPosition("员工");
-        int n = mapper.update(user);
+        EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
+        Employee employee = new Employee();
+        employee.setId(5);
+        employee.setAge(30);
+        employee.setName("刘好好");
+        employee.setPosition("员工");
+        int n = mapper.update(employee);
         if (n != 0) {
             System.out.println("成功");
         }
@@ -89,7 +82,7 @@ public class TestUserMapper {
 //        构建SqlSession对象
         SqlSession sqlSession = factory.openSession();
 //        利用SqlSession对象生成一个已实现的接口对象
-        UserMapper mapper = sqlSession.getMapper(UserMapper.class);
+        EmployeeMapper mapper = sqlSession.getMapper(EmployeeMapper.class);
 //        User user = new User();
 //        user.setUid(5);
 //        user.setUage(30);
