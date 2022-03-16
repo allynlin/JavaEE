@@ -27,4 +27,7 @@ namespace:命名空间规则，具有唯一性。可以自己命名，但建议�
         from mybatis.employee
         where id = #{id}
     </delete>
+    <insert id="autoadd" useGeneratedKeys="true" keyProperty="id">
+        insert mybatis.employee (name, age, position) values (#{name},#{age},#{position})
+    </insert>
 </mapper>
