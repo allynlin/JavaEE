@@ -51,6 +51,27 @@
                 phone=#{phone},
             </if>
         </set>
-            where id=#{id}
+        where id=#{id}
     </update>
+    <update id="updateCustomerByTrim">
+        update mybatis.t_customer
+        <trim prefix="set" suffixOverrides=",">
+            <if test="username!=null and username!=''">
+                username=#{username},
+            </if>
+            <if test="jobs!=null and jobs!=''">
+                jobs=#{jobs},
+            </if>
+            <if test="phone!=null and phone !=''">
+                phone=#{phone},
+            </if>
+        </trim>
+        where id=#{id}
+    </update>
+    <select id="findByArray" resultType="customer">
+        select * from mybatis.t_customer where id in
+        <foreach item="id" index="index" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
 </mapper>
