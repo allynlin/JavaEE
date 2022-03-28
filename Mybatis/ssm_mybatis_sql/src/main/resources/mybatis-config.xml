@@ -23,6 +23,6 @@
     </environments>
     <!--引入映射文件。其内部可以配置多个mapper元素-->
     <mappers>
-        <mapper resource="mapper/CustomerMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/CustomerMapper.xml"/>
     </mappers>
 </configuration>
