@@ -74,4 +74,16 @@
             #{id}
         </foreach>
     </select>
+    <select id="findByList" resultType="customer">
+        select * from mybatis.t_customer where id in
+        <foreach item="id" index="index" collection="list" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </select>
+    <select id="findByMap" resultType="customer">
+        select * from mybatis.t_customer where id in
+        <foreach item="roleMap" index="index" collection="id" open="(" separator="," close=")">
+            #{roleMap}
+        </foreach>
+    </select>
 </mapper>

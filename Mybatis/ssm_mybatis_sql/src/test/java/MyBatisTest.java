@@ -3,7 +3,10 @@ import com.cshbxy.untils.MyBatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class MyBatisTest {
     @Test
@@ -94,6 +97,46 @@ public class MyBatisTest {
         Integer[] roleIds = {2, 3};
         //执行SqlSession的查询方法，返回结果集
         List<Customer> customers = session.selectList("com.cshbxy.mapper.CustomerMapper.findByArray", roleIds);
+        //输出查询结果信息
+        for (Customer customer : customers) {
+            System.out.println(customer);
+        }
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void findByListTest() {
+        //通过工具箱获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        //创建List集合，封装查询id
+        List<Integer> ids = new ArrayList<Integer>();
+        ids.add(1);
+        ids.add(2);
+        //执行SqlSession的查询方法，返回结果集
+        List<Customer> customers = session.selectList("com.cshbxy.mapper.CustomerMapper.findByList", ids);
+        //输出查询结果信息
+        for (Customer customer : customers) {
+            System.out.println(customer);
+        }
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void findByMapTest() {
+        //通过工具箱获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        //创建List集合，封装查询id
+        List<Integer> ids = new ArrayList<Integer>();
+        ids.add(1);
+        ids.add(2);
+        ids.add(3);
+        Map<String, Object> conditionMap = new HashMap<String, Object>();
+        conditionMap.put("id", ids);
+        conditionMap.put("jobs", "teacher");
+        //执行SqlSession的查询方法，返回结果集
+        List<Customer> customers = session.selectList("com.cshbxy.mapper.CustomerMapper.findByMap", conditionMap);
         //输出查询结果信息
         for (Customer customer : customers) {
             System.out.println(customer);
