@@ -5,29 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-29">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63/storage_v2/_src_/schema/mysql.osA4Bg.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63/storage_v2/_src_/schema/sakila.oXLGyQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63/storage_v2/_src_/schema/sakila.oXLGyQ.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63/storage_v2/_src_/schema/sys.zb4BAA.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63/storage_v2/_src_/schema/sys.zb4BAA.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/IdCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/untils/MyBatisUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/IdCardMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/PersonMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/IdCard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/Person.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/untils/MyBatisUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Orders.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Users.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/UsersMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/PersonMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/PersonMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/PersonMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/PersonMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +33,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -72,15 +67,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Java EE\Mybatis\relation&amp;cache" />
       <recent name="D:\Java EE\Mybatis\relation&amp;cache\src\main\resources\com\cshbxy\mapper" />
+      <recent name="D:\Java EE\Mybatis\relation&amp;cache" />
       <recent name="D:\Java EE\Mybatis\relation&amp;cache\src\main\java\com\cshbxy\pojo" />
       <recent name="D:\Java EE\Mybatis\relation&amp;cache\src\main\resources" />
       <recent name="D:\Java EE\Mybatis\relation&amp;cache\src\main\java" />
@@ -89,7 +85,7 @@
       <recent name="com.cshbxy.untils" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MyBatisTest.findUserTest">
     <configuration name="MyBatisTest.findPersonByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="relation&amp;cache" />
       <option name="PACKAGE_NAME" value="" />
@@ -100,8 +96,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MyBatisTest.findPersonByIdTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="relation&amp;cache" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="findPersonByIdTest2" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.findUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="relation&amp;cache" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="findUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.findUserTest" />
+        <item itemvalue="JUnit.MyBatisTest.findPersonByIdTest2" />
         <item itemvalue="JUnit.MyBatisTest.findPersonByIdTest" />
       </list>
     </recent_temporary>
@@ -114,7 +132,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648514932210</updated>
-      <workItem from="1648514932215" duration="2945000" />
+      <workItem from="1648514932215" duration="10546000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-29">
       <created>1648514982417</created>

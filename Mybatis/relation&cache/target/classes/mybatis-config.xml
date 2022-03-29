@@ -5,6 +5,12 @@
 <configuration>
     <!--引入属性文件。可以配置多个properties元素-->
     <properties resource="db.properties"/>
+    <settings>
+        <!--        打开延迟加载的开关-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--        将积极加载改为消息加载，即按需加载-->
+        <setting name="aggressiveLazyLoading" value="true"/>
+    </settings>
     <!--采用包扫描方式定义别名。其内部可以配置多个package元素-->
     <typeAliases>
         <package name="com.cshbxy.pojo"/>
@@ -25,5 +31,6 @@
     <mappers>
         <mapper resource="com/cshbxy/mapper/IdCardMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/PersonMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/UsersMapper.xml"/>
     </mappers>
 </configuration>

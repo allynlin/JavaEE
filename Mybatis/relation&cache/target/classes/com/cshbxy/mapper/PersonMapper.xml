@@ -10,12 +10,32 @@
         where id = #{id}
     </select>
     <resultMap id="IdCardWithPersonResult" type="Person">
-        <id property="id" column="id"></id>
-        <result property="name" column="name"></result>
-        <result property="age" column="age"></result>
-        <result property="sex" column="sex"></result>
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="sex" column="sex"/>
         <!--        一对一：association使用select属性引入另外一条SQL语句-->
         <association property="card" column="card_id" javaType="IdCard"
-                     select="com.cshbxy.mapper.IdCardMapper.findCodeById"></association>
+                     select="com.cshbxy.mapper.IdCardMapper.findCodeById"/>
+    </resultMap>
+    <select id="findPersonById2" resultMap="IdCardWithPersonResult2">
+        select p.*,
+               c.id cid,
+               c.CODE
+        from mybatis.tb_person p,
+             mybatis.tb_idcard c
+        where p.card_id = c.id
+          and p.id = #{id}
+    </select>
+    <resultMap id="IdCardWithPersonResult2" type="Person">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="sex" column="sex"/>
+        <!--        一对一：association使用select属性引入另外一条SQL语句-->
+        <association property="card" javaType="IdCard">
+            <id property="id" column="cid"/>
+            <result property="code" column="code"/>
+        </association>
     </resultMap>
 </mapper>
