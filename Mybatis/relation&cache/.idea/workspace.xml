@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-29">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/OrdersMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/ProductMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Orders.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Orders.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/Orders.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/Orders.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-29" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -144,7 +133,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648514932210</updated>
-      <workItem from="1648514932215" duration="12084000" />
+      <workItem from="1648514932215" duration="12497000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-29">
       <created>1648514982417</created>
@@ -174,7 +163,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648539622280</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="2022-03-29">
+      <created>1648541171045</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1648541171045</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2022-03-29">
+      <created>1648541175300</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1648541175300</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
