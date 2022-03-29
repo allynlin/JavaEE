@@ -1,3 +1,4 @@
+import com.cshbxy.pojo.Book;
 import com.cshbxy.pojo.Orders;
 import com.cshbxy.pojo.Person;
 import com.cshbxy.pojo.Users;
@@ -63,6 +64,22 @@ public class MyBatisTest {
         Orders orders = session.selectOne("com.cshbxy.mapper.OrdersMapper.findOrdersWithProduct2", 1);
         //输出查询结果信息
         System.out.println(orders);
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void findBookByIdTest() {
+        //通过工具箱获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        //查询id为1的人的信息
+        Book book1 = session.selectOne("com.cshbxy.mapper.BookMapper.findBookById", 1);
+        //输出查询结果信息
+        System.out.println(book1.toString());
+        //查询id为1的人的信息
+        Book book2 = session.selectOne("com.cshbxy.mapper.BookMapper.findBookById", 1);
+        //输出查询结果信息
+        System.out.println(book2.toString());
         //关闭SqlSession
         session.close();
     }

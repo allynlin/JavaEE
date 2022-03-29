@@ -10,6 +10,10 @@
         <setting name="lazyLoadingEnabled" value="true"/>
         <!--        将积极加载改为消息加载，即按需加载-->
         <setting name="aggressiveLazyLoading" value="true"/>
+        <!--        显示日志-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--        关闭一级缓存-->
+        <!--        <setting name="localCacheScope" value="STATEMENT"/>-->
     </settings>
     <!--采用包扫描方式定义别名。其内部可以配置多个package元素-->
     <typeAliases>
@@ -34,5 +38,6 @@
         <mapper resource="com/cshbxy/mapper/UsersMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/OrdersMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/ProductMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/BookMapper.xml"/>
     </mappers>
 </configuration>

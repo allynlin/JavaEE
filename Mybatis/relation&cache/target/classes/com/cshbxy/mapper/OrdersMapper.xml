@@ -16,6 +16,7 @@
                     select="com.cshbxy.mapper.ProductMapper.findProductById">
         </collection>
     </resultMap>
+    <!--    多对多嵌套结果查询：查询某订单及其关联商品详情-->
     <select id="findOrdersWithProduct2" resultMap="OrdersWithProductResult2">
         select o.*,
                p.id as pid,
