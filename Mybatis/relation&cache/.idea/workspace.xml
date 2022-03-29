@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-29" />
+    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-29">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/OrdersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/OrdersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/UsersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/OrdersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/OrdersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/UsersMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/UsersMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/pojo/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,12 +84,22 @@
       <recent name="com.cshbxy.untils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.findOrdersTest">
+  <component name="RunManager" selected="JUnit.MyBatisTest.findOrdersTest2">
     <configuration name="MyBatisTest.findOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="relation&amp;cache" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
       <option name="METHOD_NAME" value="findOrdersTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBatisTest.findOrdersTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="relation&amp;cache" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
+      <option name="METHOD_NAME" value="findOrdersTest2" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,6 +137,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.findOrdersTest2" />
         <item itemvalue="JUnit.MyBatisTest.findOrdersTest" />
         <item itemvalue="JUnit.MyBatisTest.findUserTest" />
         <item itemvalue="JUnit.MyBatisTest.findPersonByIdTest2" />
@@ -133,7 +153,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1648514932210</updated>
-      <workItem from="1648514932215" duration="12497000" />
+      <workItem from="1648514932215" duration="12922000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-29">
       <created>1648514982417</created>
@@ -177,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648541175300</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="2022-03-29">
+      <created>1648541584505</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1648541584505</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

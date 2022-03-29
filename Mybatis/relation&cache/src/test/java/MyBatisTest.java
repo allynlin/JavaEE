@@ -18,6 +18,7 @@ public class MyBatisTest {
         //关闭SqlSession
         session.close();
     }
+
     @Test
     public void findPersonByIdTest2() {
         //通过工具箱获取SqlSession对象
@@ -29,8 +30,9 @@ public class MyBatisTest {
         //关闭SqlSession
         session.close();
     }
+
     @Test
-    public void findUserTest(){
+    public void findUserTest() {
         //通过工具箱获取SqlSession对象
         SqlSession session = MyBatisUtils.getSession();
         //查询id为1的人的信息
@@ -40,12 +42,25 @@ public class MyBatisTest {
         //关闭SqlSession
         session.close();
     }
+
     @Test
-    public void findOrdersTest(){
+    public void findOrdersTest() {
         //通过工具箱获取SqlSession对象
         SqlSession session = MyBatisUtils.getSession();
         //查询id为1的人的信息
         Orders orders = session.selectOne("com.cshbxy.mapper.OrdersMapper.findOrdersWithProduct", 1);
+        //输出查询结果信息
+        System.out.println(orders);
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void findOrdersTest2() {
+        //通过工具箱获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        //查询id为1的人的信息
+        Orders orders = session.selectOne("com.cshbxy.mapper.OrdersMapper.findOrdersWithProduct2", 1);
         //输出查询结果信息
         System.out.println(orders);
         //关闭SqlSession
