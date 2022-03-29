@@ -32,5 +32,7 @@
         <mapper resource="com/cshbxy/mapper/IdCardMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/PersonMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/UsersMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/OrdersMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/ProductMapper.xml"/>
     </mappers>
 </configuration>
