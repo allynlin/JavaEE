@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cshbxy.mapper.ProductMapper2">
+    <select id="findProduct2ById" resultType="Product2">
+        select *
+        from mybatis.product
+        where id in (select id from mybatis.category where category_id = #{id});
+    </select>
+</mapper>

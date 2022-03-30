@@ -1,7 +1,4 @@
-import com.cshbxy.pojo.Book;
-import com.cshbxy.pojo.Orders;
-import com.cshbxy.pojo.Person;
-import com.cshbxy.pojo.Users;
+import com.cshbxy.pojo.*;
 import com.cshbxy.untils.MyBatisUtils;
 import com.sun.org.apache.xpath.internal.operations.Or;
 import org.apache.ibatis.session.SqlSession;
@@ -37,7 +34,7 @@ public class MyBatisTest {
         //通过工具箱获取SqlSession对象
         SqlSession session = MyBatisUtils.getSession();
         //查询id为1的人的信息
-        Users users = session.selectOne("com.cshbxy.mapper.UsersMapper.findUserWithOrders", 1);
+        Users users = session.selectOne("com.cshbxy.mapper.UsersMapper.findUserWithOrders", 2);
         //输出查询结果信息
         System.out.println(users);
         //关闭SqlSession

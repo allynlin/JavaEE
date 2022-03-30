@@ -11,7 +11,7 @@
         <!--        将积极加载改为消息加载，即按需加载-->
         <setting name="aggressiveLazyLoading" value="true"/>
         <!--        显示日志-->
-        <setting name="logImpl" value="STDOUT_LOGGING"/>
+<!--        <setting name="logImpl" value="STDOUT_LOGGING"/>-->
         <!--        关闭一级缓存-->
         <!--        <setting name="localCacheScope" value="STATEMENT"/>-->
     </settings>
@@ -39,5 +39,7 @@
         <mapper resource="com/cshbxy/mapper/OrdersMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/ProductMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/BookMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/ProductMapper2.xml"/>
+        <mapper resource="com/cshbxy/mapper/CategoryMapper.xml"/>
     </mappers>
 </configuration>
