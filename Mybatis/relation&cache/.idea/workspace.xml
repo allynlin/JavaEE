@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-30">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Product2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/CategoryMapper.xml" afterDir="false" />
+    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-31">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/CategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/CategoryMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +150,8 @@
       <updated>1648514932210</updated>
       <workItem from="1648514932215" duration="19171000" />
       <workItem from="1648609676809" duration="2932000" />
-      <workItem from="1648684960026" duration="1807000" />
+      <workItem from="1648684960026" duration="1838000" />
+      <workItem from="1648687076657" duration="273000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-29">
       <created>1648514982417</created>
@@ -228,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648613365556</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="2022-03-31">
+      <created>1648686793551</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648686793551</updated>
+    </task>
+    <task id="LOCAL-00012" summary="2022-03-31">
+      <created>1648686803876</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1648686803876</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +260,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2022-03-29" />
     <MESSAGE value="2022-03-30" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022-03-30" />
+    <MESSAGE value="2022-03-31" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022-03-31" />
   </component>
 </project>
