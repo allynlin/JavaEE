@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cshbxy.mapper.CategoryMapper">
+    <!--    根据id查询图书信息-->
+    <select id="findCategoryWithProduct2" resultMap="CategoryWithProduct2Result">
+        select p.id pid,
+               p.goodsname,
+               p.price,
+               c.id cid,
+               c.typename
+        from mybatis.category c,
+             mybatis.product p
+        where c.id = p.category_id
+          and c.id = #{cid}
+    </select>
+    <resultMap id="CategoryWithProduct2Result" type="Category">
+        <id column="cid" property="id"/>
+        <result column="typename" property="typename"/>
+        <collection property="product2List" javaType="list" ofType="Product2">
+            <id column="pid" property="id"/>
+            <result column="goodsname" property="goodsname"/>
+            <result column="price" property="price"/>
+        </collection>
+    </resultMap>
+</mapper>

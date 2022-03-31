@@ -39,5 +39,6 @@
         <mapper resource="com/cshbxy/mapper/OrdersMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/ProductMapper.xml"/>
         <mapper resource="com/cshbxy/mapper/BookMapper.xml"/>
+        <mapper resource="com/cshbxy/mapper/CategoryMapper.xml"/>
     </mappers>
 </configuration>

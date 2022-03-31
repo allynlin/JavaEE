@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-29">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/04bd0e47-d4a0-4006-9758-d9c57cddbe63.xml" afterDir="false" />
+    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-30">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/pojo/Product2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper/CategoryMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyBatisTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/mapper/BookMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/MyBatisTest.class" afterDir="false" />
     </list>
@@ -84,7 +85,7 @@
       <recent name="com.cshbxy.untils" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyBatisTest.findUserTest">
+  <component name="RunManager" selected="JUnit.MyBatisTest.findCategoryTest">
     <configuration name="MyBatisTest.findBookByIdTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="relation&amp;cache" />
       <option name="PACKAGE_NAME" value="" />
@@ -95,11 +96,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MyBatisTest.findOrdersTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MyBatisTest.findCategoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="relation&amp;cache" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyBatisTest" />
-      <option name="METHOD_NAME" value="findOrdersTest" />
+      <option name="METHOD_NAME" value="findCategoryTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -137,11 +138,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyBatisTest.findCategoryTest" />
         <item itemvalue="JUnit.MyBatisTest.findUserTest" />
         <item itemvalue="JUnit.MyBatisTest.findproductBytypenameTest" />
         <item itemvalue="JUnit.MyBatisTest.findBookByIdTest" />
         <item itemvalue="JUnit.MyBatisTest.findOrdersTest2" />
-        <item itemvalue="JUnit.MyBatisTest.findOrdersTest" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +155,8 @@
       <option name="presentableId" value="Default" />
       <updated>1648514932210</updated>
       <workItem from="1648514932215" duration="19171000" />
-      <workItem from="1648609676809" duration="2908000" />
+      <workItem from="1648609676809" duration="2932000" />
+      <workItem from="1648684960026" duration="1807000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-29">
       <created>1648514982417</created>
@@ -219,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648554845428</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="2022-03-30">
+      <created>1648613365555</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648613365556</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +250,7 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="2022-03-29" />
-    <option name="LAST_COMMIT_MESSAGE" value="2022-03-29" />
+    <MESSAGE value="2022-03-30" />
+    <option name="LAST_COMMIT_MESSAGE" value="2022-03-30" />
   </component>
 </project>

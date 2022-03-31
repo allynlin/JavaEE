@@ -80,4 +80,16 @@ public class MyBatisTest {
         //关闭SqlSession
         session.close();
     }
+
+    @Test
+    public void findCategoryTest() {
+        //通过工具箱获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        //查询id为1的人的信息
+        Category category = session.selectOne("com.cshbxy.mapper.CategoryMapper.findCategoryWithProduct2", 2);
+        //输出查询结果信息
+        System.out.println(category);
+        //关闭SqlSession
+        session.close();
+    }
 }
