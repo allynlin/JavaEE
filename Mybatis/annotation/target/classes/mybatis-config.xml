@@ -39,5 +39,7 @@
         <mapper class="com.cshbxy.dao.UsersMapper"/>
         <mapper class="com.cshbxy.dao.OrdersMapper"/>
         <mapper class="com.cshbxy.dao.ProductMapper"/>
+        <mapper class="com.cshbxy.dao.IStudentMapper"/>
+        <mapper class="com.cshbxy.dao.IClassMapper"/>
     </mappers>
 </configuration>

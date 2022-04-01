@@ -1,14 +1,10 @@
-import com.cshbxy.dao.OrdersMapper;
-import com.cshbxy.dao.PersonMapper;
-import com.cshbxy.dao.UsersMapper;
-import com.cshbxy.dao.WorkerMapper;
-import com.cshbxy.pojo.Orders;
-import com.cshbxy.pojo.Person;
-import com.cshbxy.pojo.Users;
-import com.cshbxy.pojo.Worker;
+import com.cshbxy.dao.*;
+import com.cshbxy.pojo.*;
 import com.cshbxy.untils.MyBatisUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
+
+import javax.rmi.CORBA.Stub;
 
 public class MyBatisTest {
     @Test
@@ -124,6 +120,50 @@ public class MyBatisTest {
         //查询id为1的人员信息
         Orders orders = mapper.selectOrdersById(3);
         System.out.println(orders.toString());
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void selectStudentByIdTest() {
+        //通过工具类获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        IStudentMapper mapper = session.getMapper(IStudentMapper.class);
+        //查询id为3的人员信息
+        IStudent student = mapper.selectStudent(3);
+        System.out.println(student.toString());
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void updateStudentByIdTest() {
+        //通过工具类获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        IStudent student = new IStudent();
+        student.setName("李雷");
+        student.setAge(21);
+        student.setId(4);
+        IStudentMapper mapper = session.getMapper(IStudentMapper.class);
+        int result = mapper.updateStudent(student);
+        if (result > 0)
+            System.out.println("成功修改" + result + "条数据");
+        else
+            System.out.println("修改数据失败");
+        System.out.println(student.toString());
+        session.commit();
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void selectClassById() {
+        //通过工具类获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        IClassMapper mapper = session.getMapper(IClassMapper.class);
+        //查询id为1的人员信息
+        IClass iClass = mapper.selectClassById(2);
+        System.out.println(iClass);
         //关闭SqlSession
         session.close();
     }
