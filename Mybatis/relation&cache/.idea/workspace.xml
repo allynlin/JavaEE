@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-31" />
+    <list default="true" id="bb5f2fb8-08a2-4e21-af20-292fc0182ff4" name="变更" comment="2022-03-31">
+      <change afterPath="$PROJECT_DIR$/../annotation/src/main/java/com/cshbxy/dao/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../annotation/src/main/java/com/cshbxy/dao/OrdersMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../annotation/src/main/java/com/cshbxy/dao/OrdersMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../annotation/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../annotation/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../annotation/src/test/java/MyBatisTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../annotation/src/test/java/MyBatisTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../annotation/target/classes/com/cshbxy/dao/OrdersMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../annotation/target/classes/com/cshbxy/dao/OrdersMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../annotation/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../annotation/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../annotation/target/test-classes/MyBatisTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/../annotation/target/test-classes/MyBatisTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +67,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言" value="MySQL" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/com/cshbxy/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="全局库" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -149,6 +158,7 @@
       <workItem from="1648609676809" duration="2932000" />
       <workItem from="1648684960026" duration="1838000" />
       <workItem from="1648687076657" duration="517000" />
+      <workItem from="1648722195351" duration="930000" />
     </task>
     <task id="LOCAL-00001" summary="2022-03-29">
       <created>1648514982417</created>

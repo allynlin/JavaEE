@@ -1,6 +1,8 @@
+import com.cshbxy.dao.OrdersMapper;
 import com.cshbxy.dao.PersonMapper;
 import com.cshbxy.dao.UsersMapper;
 import com.cshbxy.dao.WorkerMapper;
+import com.cshbxy.pojo.Orders;
 import com.cshbxy.pojo.Person;
 import com.cshbxy.pojo.Users;
 import com.cshbxy.pojo.Worker;
@@ -101,6 +103,7 @@ public class MyBatisTest {
         //关闭SqlSession
         session.close();
     }
+
     @Test
     public void selectUserByIdTest() {
         //通过工具类获取SqlSession对象
@@ -108,7 +111,19 @@ public class MyBatisTest {
         UsersMapper mapper = session.getMapper(UsersMapper.class);
         //查询id为1的人员信息
         Users users = mapper.selectUserById(1);
-        System.out.println(users);
+        System.out.println(users.toString());
+        //关闭SqlSession
+        session.close();
+    }
+
+    @Test
+    public void selectOrdersByIdTest() {
+        //通过工具类获取SqlSession对象
+        SqlSession session = MyBatisUtils.getSession();
+        OrdersMapper mapper = session.getMapper(OrdersMapper.class);
+        //查询id为1的人员信息
+        Orders orders = mapper.selectOrdersById(3);
+        System.out.println(orders.toString());
         //关闭SqlSession
         session.close();
     }

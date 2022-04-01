@@ -38,5 +38,6 @@
         <mapper class="com.cshbxy.dao.PersonMapper"/>
         <mapper class="com.cshbxy.dao.UsersMapper"/>
         <mapper class="com.cshbxy.dao.OrdersMapper"/>
+        <mapper class="com.cshbxy.dao.ProductMapper"/>
     </mappers>
 </configuration>
