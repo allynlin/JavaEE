@@ -5,37 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d2168314-2c15-4ea1-a969-28eaa4006d98" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/User1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/User2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cshbxy/User1Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/cshbxy/User2Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Spring_5_2_3_RELEASE.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-User1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/applicationContext-User2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Spring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-aop-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-aspects-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-beans-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-context-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-context-support-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-core-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-expression-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-instrument-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-jdbc-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-jms-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-messaging-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-orm-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-oxm-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-test-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-tx-5.2.3.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cshbxy/HelloSpring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/HelloSpring.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cshbxy/HelloSpringTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cshbxy/HelloSpringTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cshbxy/User1Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cshbxy/User1Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cshbxy/User2Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cshbxy/User2Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/cshbxy/HelloSpring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/cshbxy/HelloSpring.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cshbxy/User1Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cshbxy/User1Test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/cshbxy/User2Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/cshbxy/User2Test.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,10 +55,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java EE\Mybatis\Spring\src\main\resources" />
+    </key>
   </component>
   <component name="RunManager" selected="应用程序.User2Test">
     <configuration name="HelloSpringTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -138,6 +123,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648882922630</updated>
       <workItem from="1648882930043" duration="5001000" />
+      <workItem from="1648895719298" duration="3902000" />
     </task>
     <servers />
   </component>
