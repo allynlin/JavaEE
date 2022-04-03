@@ -5,6 +5,12 @@ public class User2 {
     private String name;
     private int password;
 
+    private User1 user1;
+
+    public void setUser1(User1 user1) {
+        this.user1 = user1;
+    }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -23,6 +29,7 @@ public class User2 {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", password=" + password +
+                ", user1=" + user1 +
                 '}';
     }
 }

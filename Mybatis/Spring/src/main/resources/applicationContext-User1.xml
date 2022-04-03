@@ -4,8 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
     <bean id="user1" class="com.cshbxy.User1">
-        <constructor-arg name="id" value="1"/>
-        <constructor-arg name="name" value="张三"/>
-        <constructor-arg name="password" value="123456"/>
+<!--        <constructor-arg name="id" value="1"/>-->
+<!--        <constructor-arg name="name" value="张三"/>-->
+<!--        <constructor-arg name="password" value="123456"/>-->
+
+<!--        <constructor-arg type="int" value="1"/>-->
+<!--        <constructor-arg type="java.lang.String" value="张三"/>-->
+<!--        <constructor-arg type="java.lang.String" value="123456"/>-->
+
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="张三"/>
+        <constructor-arg index="2" value="123456"/>
     </bean>
 </beans>

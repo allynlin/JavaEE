@@ -5,11 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class HelloSpringTest {
     public static void main(String[] args) {
-        // 鍒濆鍖杝pring瀹瑰櫒锛屽姞杞絘pplicationContext.xml閰嶇疆
+        // 初始化spring容器，加载applicationContext.xml配置
         ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
-        //閫氳繃瀹瑰櫒鑾峰彇閰嶇疆涓環elloSpring瀹炰緥
+        //通过容器获取配置中helloSpring实例
         HelloSpring helloSpring=(HelloSpring) applicationContext.getBean("helloSpring");
-        //璋冪敤helloSpring鐨剆ayHello鏂规硶
+        //调用helloSpring的sayHello方法
         helloSpring.sayHello();
     }
 }

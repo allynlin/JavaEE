@@ -3,9 +3,16 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="user1" class="com.cshbxy.User1">
+        <constructor-arg index="0" value="1"/>
+        <constructor-arg index="1" value="张三"/>
+        <constructor-arg index="2" value="123456"/>
+    </bean>
     <bean id="user2" class="com.cshbxy.User2">
         <property name="id" value="2"/>
         <property name="name" value="李四"/>
         <property name="password" value="123456"/>
+<!--        引用User1为ref注入-->
+        <property name="user1" ref="user1"/>
     </bean>
 </beans>

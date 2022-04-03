@@ -8,7 +8,7 @@ public class User2Test {
         //加载applicationContext.xml配置
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext-User2.xml");
         //获取bean
-        User2 user2 = ac.getBean("user2", User2.class);
+        User2 user2 = (User2) ac.getBean("user2");
         //输出user2的信息
         System.out.println(user2);
     }

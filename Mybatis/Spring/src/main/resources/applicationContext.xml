@@ -6,9 +6,4 @@
     <bean id="helloSpring" class="com.cshbxy.HelloSpring">
         <property name="name" value="张三"/>
     </bean>
-    <bean id="user2" class="com.cshbxy.User2">
-        <property name="id" value="2"/>
-        <property name="name" value="李四"/>
-        <property name="password" value="123456"/>
-    </bean>
 </beans>
