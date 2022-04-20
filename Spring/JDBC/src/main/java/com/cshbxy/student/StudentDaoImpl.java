@@ -62,7 +62,6 @@ public class StudentDaoImpl implements StudentDao {
         } catch (EmptyResultDataAccessException e) {
             return null;
         }
-
         return student;
     }
 }
