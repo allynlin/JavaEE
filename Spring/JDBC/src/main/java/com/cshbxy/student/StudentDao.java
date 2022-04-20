@@ -17,4 +17,6 @@ public interface StudentDao {
 
     //查询所有学生信息
     public List<Student> findAllStudent();
+
+    public Student findStudentByUsernameAndPassword(String username, String password);
 }

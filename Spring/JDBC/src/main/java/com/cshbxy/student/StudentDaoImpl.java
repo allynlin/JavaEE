@@ -1,5 +1,6 @@
 package com.cshbxy.student;
 
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -51,5 +52,17 @@ public class StudentDaoImpl implements StudentDao {
         String sql = "select * from student";
         RowMapper<Student> rowMapper = new BeanPropertyRowMapper<Student>(Student.class);
         return this.jdbcTemplate.query(sql, rowMapper);
+    }
+
+    public Student findStudentByUsernameAndPassword(String username, String password) {
+        String sql = "select * from student where username = ? and password = ?";
+        Student student = null;
+        try {
+            student = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Student.class), username, password);
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+
+        return student;
     }
 }
