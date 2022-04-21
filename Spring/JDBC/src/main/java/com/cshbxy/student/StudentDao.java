@@ -19,4 +19,7 @@ public interface StudentDao {
     public List<Student> findAllStudent();
 
     public Student findStudentByUsernameAndPassword(String username, String password);
+
+    //通过姓名和班级查询
+    public List<Student> findStudentByUsernameAndCourse(String username, String course);
 }

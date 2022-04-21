@@ -3,20 +3,15 @@ package com.cshbxy.student;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class UpdateStudentTest {
+import java.util.List;
+
+public class findStudentByUsernameAndCourseTest {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         StudentDao studentDao = applicationContext.getBean("studentDao", StudentDao.class);
-        Student student = new Student();
-        student.setId(2);
-        student.setUsername("test");
-        student.setPassword("11111");
-        student.setCourse("C++");
-        int result = studentDao.updateStudent(student);
-        if (result > 0) {
-            System.out.println("更新成功");
-        } else {
-            System.out.println("更新失败");
+        List<Student> students = studentDao.findStudentByUsernameAndCourse("张", "c");
+        for (Student student : students) {
+            System.out.println(student);
         }
     }
 }

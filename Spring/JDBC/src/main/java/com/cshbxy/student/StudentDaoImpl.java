@@ -42,9 +42,21 @@ public class StudentDaoImpl implements StudentDao {
 
     public Student findStudentById(int id) {
         String sql = "select * from student where id = ?";
-        //创建一个新的BeanPropertyRowMapper对象
-        RowMapper<Student> rowMapper = new BeanPropertyRowMapper<Student>(Student.class);
-        return this.jdbcTemplate.queryForObject(sql, rowMapper, id);
+        //如果查询失败返回空
+        Student student = null;
+        try {
+            student = jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Student.class), id);
+        } catch (EmptyResultDataAccessException e) {
+            return null;
+        }
+        return student;
+//        RowMapper<Student> rowMapper=null;
+//        try {
+//            rowMapper = new BeanPropertyRowMapper<Student>(Student.class);
+//        }catch (EmptyResultDataAccessException e){
+//            return null;
+//        }
+//        return this.jdbcTemplate.queryForObject(sql, rowMapper, id);
     }
 
     //查询所有学生信息
@@ -63,5 +75,12 @@ public class StudentDaoImpl implements StudentDao {
             return null;
         }
         return student;
+    }
+
+    //通过姓名和course模糊查询
+    public List<Student> findStudentByUsernameAndCourse(String username, String course) {
+        String sql = "select * from student where username like ? and course like ?";
+        RowMapper<Student> rowMapper = new BeanPropertyRowMapper<Student>(Student.class);
+        return this.jdbcTemplate.query(sql, rowMapper, "%" + username + "%", "%" + course + "%");
     }
 }
