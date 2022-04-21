@@ -1,21 +1,18 @@
-package com.cshbxy.student;
+package com.cshbxy.student.Service;
 
+import com.cshbxy.student.Dao.StudentDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class AddStudentTest {
+public class DeleteStudentTest {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         StudentDao studentDao = applicationContext.getBean("studentDao", StudentDao.class);
-        Student student = new Student();
-        student.setUsername("张三");
-        student.setPassword("123456");
-        student.setCourse("java");
-        int result = studentDao.addStudent(student);
+        int result = studentDao.deleteStudent(5);
         if (result > 0) {
-            System.out.println("添加成功");
+            System.out.println("删除成功");
         } else {
-            System.out.println("添加失败");
+            System.out.println("删除失败");
         }
     }
 }

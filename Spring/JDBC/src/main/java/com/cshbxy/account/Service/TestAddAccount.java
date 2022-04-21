@@ -1,5 +1,7 @@
-package com.cshbxy.account;
+package com.cshbxy.account.Service;
 
+import com.cshbxy.account.Dao.Account;
+import com.cshbxy.account.Dao.AccountDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

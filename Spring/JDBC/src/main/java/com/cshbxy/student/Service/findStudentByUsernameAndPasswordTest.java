@@ -1,5 +1,7 @@
-package com.cshbxy.student;
+package com.cshbxy.student.Service;
 
+import com.cshbxy.student.Dao.Student;
+import com.cshbxy.student.Dao.StudentDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

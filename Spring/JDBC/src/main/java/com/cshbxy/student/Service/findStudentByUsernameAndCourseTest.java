@@ -1,17 +1,19 @@
-package com.cshbxy.student;
+package com.cshbxy.student.Service;
 
+import com.cshbxy.student.Dao.Student;
+import com.cshbxy.student.Dao.StudentDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class DeleteStudentTest {
+import java.util.List;
+
+public class findStudentByUsernameAndCourseTest {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("applicationContext.xml");
         StudentDao studentDao = applicationContext.getBean("studentDao", StudentDao.class);
-        int result = studentDao.deleteStudent(5);
-        if (result > 0) {
-            System.out.println("É¾³ı³É¹¦");
-        } else {
-            System.out.println("É¾³ıÊ§°Ü");
+        List<Student> students = studentDao.findStudentByUsernameAndCourse("ÕÅ", "c");
+        for (Student student : students) {
+            System.out.println(student);
         }
     }
 }

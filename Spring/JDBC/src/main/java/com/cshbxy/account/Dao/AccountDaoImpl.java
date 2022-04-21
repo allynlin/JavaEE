@@ -1,4 +1,4 @@
-package com.cshbxy.account;
+package com.cshbxy.account.Dao;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;

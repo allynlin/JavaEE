@@ -1,4 +1,4 @@
-package com.cshbxy.student;
+package com.cshbxy.student.Dao;
 
 public class Student {
     private int id;

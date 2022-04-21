@@ -1,4 +1,4 @@
-package com.cshbxy.account;
+package com.cshbxy.account.Dao;
 
 public class Account {
     private int id;

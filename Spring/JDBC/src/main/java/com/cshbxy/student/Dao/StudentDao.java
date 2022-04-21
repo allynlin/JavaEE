@@ -1,4 +1,4 @@
-package com.cshbxy.student;
+package com.cshbxy.student.Dao;
 
 import java.util.List;
 

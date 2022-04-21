@@ -1,4 +1,4 @@
-package com.cshbxy.student;
+package com.cshbxy.student.Dao;
 
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
