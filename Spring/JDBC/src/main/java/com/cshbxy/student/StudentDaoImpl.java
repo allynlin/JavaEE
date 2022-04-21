@@ -50,13 +50,6 @@ public class StudentDaoImpl implements StudentDao {
             return null;
         }
         return student;
-//        RowMapper<Student> rowMapper=null;
-//        try {
-//            rowMapper = new BeanPropertyRowMapper<Student>(Student.class);
-//        }catch (EmptyResultDataAccessException e){
-//            return null;
-//        }
-//        return this.jdbcTemplate.queryForObject(sql, rowMapper, id);
     }
 
     //查询所有学生信息
