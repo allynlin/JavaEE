@@ -16,4 +16,6 @@ public interface AccountDao {
 
     public List<Account> findAllAccount();
 
+    public void transfer(String out, String in, double money);
+
 }

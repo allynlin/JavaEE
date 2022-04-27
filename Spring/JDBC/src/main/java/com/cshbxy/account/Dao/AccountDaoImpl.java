@@ -4,6 +4,9 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
@@ -81,5 +84,14 @@ public class AccountDaoImpl implements AccountDao {
         RowMapper<Account> rowMapper = new BeanPropertyRowMapper<Account>(Account.class);
         //通过RowMapper返回多行记录
         return this.jdbcTemplate.query(sql, rowMapper);
+    }
+
+    @Override
+    @Transactional(propagation = Propagation.REQUIRED, isolation = Isolation.DEFAULT, readOnly = false)
+    public void transfer(String out, String in, double money) {
+        String sql = "update account set balance = account.balance - ? where username = ?";
+        jdbcTemplate.update(sql, money, out);
+        String sql2 = "update account set balance = account.balance + ? where username = ?";
+        jdbcTemplate.update(sql2, money, in);
     }
 }
