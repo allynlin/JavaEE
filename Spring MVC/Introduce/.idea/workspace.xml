@@ -10,29 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c12752df-195e-41d9-b9d9-a2863052931d" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../Annotation/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annotation/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annotation/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annotation/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annotation/Annotation.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Annotation/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/controller/FirstController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jsp/page01.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/jsp/page02.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/success.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/editUser.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/Introduce_user/SESSIONS.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/SESSIONS.ser" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jar包及其它/aopalliance-1.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jar包及其它/aspectjweaver-1.8.10.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../jar包及其它/commons-logging-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/Java EE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/Java EE.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +66,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Java EE/Spring MVC/Introduce",
+    "last_opened_file_path": "D:/Java EE",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "project.structure.last.edited": "模块",
@@ -149,7 +129,7 @@
       <workItem from="1651467293190" duration="647000" />
       <workItem from="1651577271140" duration="180000" />
       <workItem from="1651629800247" duration="405000" />
-      <workItem from="1651630220757" duration="346000" />
+      <workItem from="1651630220757" duration="776000" />
     </task>
     <servers />
   </component>
