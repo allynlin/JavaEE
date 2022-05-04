@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c12752df-195e-41d9-b9d9-a2863052931d" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/Java EE.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/Java EE.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/misc.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c12752df-195e-41d9-b9d9-a2863052931d" name="变更" comment="Connect" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -129,8 +125,16 @@
       <workItem from="1651467293190" duration="647000" />
       <workItem from="1651577271140" duration="180000" />
       <workItem from="1651629800247" duration="405000" />
-      <workItem from="1651630220757" duration="776000" />
+      <workItem from="1651630220757" duration="801000" />
     </task>
+    <task id="LOCAL-00001" summary="Connect">
+      <created>1651631025033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1651631025033</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -149,6 +153,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Connect" />
+    <option name="LAST_COMMIT_MESSAGE" value="Connect" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
