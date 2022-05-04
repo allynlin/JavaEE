@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [03/May/2022:19:30:09 +0800] "GET /Introduce/user HTTP/1.1" 302 - http-bio-8080-exec-1 0
+0:0:0:0:0:0:0:1 - - [03/May/2022:19:30:10 +0800] "GET /Introduce/user/test HTTP/1.1" 200 122 http-bio-8080-exec-3 490
+0:0:0:0:0:0:0:1 - - [03/May/2022:19:30:12 +0800] "GET /favicon.ico HTTP/1.1" 404 - http-bio-8080-exec-5 0
+0:0:0:0:0:0:0:1 - - [03/May/2022:19:30:22 +0800] "GET /Introduce/user/FirstController HTTP/1.1" 404 949 http-bio-8080-exec-7 10
