@@ -18,7 +18,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1 class="text-center">Hello, world!</h1>
+            <div style="border:1px solid black;padding:20px;margin:0px 100px">
+                想说的话：<input type="text"/><br/>
+                <input type="button" value="提交" style="margin-top:5px">
+            </div>
         </div>
     </div>
 </div>
