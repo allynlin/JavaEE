@@ -1,71 +1,76 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <html>
-<head>
-    <title>添加商品信息</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="css/white-pink.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.6.0.js"></script>
-    <meta content="light dark" name="color-scheme">
-    <style>
-        h1 {
-            text-align: center;
-        }
-
-        table {
-            border: 1px solid gray;
-            border-collapse: collapse;
-        }
-
-        th, td {
-            border: 1px solid gray;
-            line-height: 30px;
-            text-align: center;
-            min-width: 50px;
-        }
-
-        input[type="text"] {
-            border: none;
-            background-color: #e9e9e9;
-            padding: 5px 3px;
-            margin: 5px;
-        }
-    </style>
+<head><title>异步提交商品</title>
+    <script type="text/javascript"
+            src="${pageContext.request.contextPath }/js/jquery-3.6.0.js"></script>
 </head>
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>添加商品信息</h1>
-            <hr/>
-            <form action="${pageContext.request.contextPath}/getProducts" method="post" class="white-pink">
-                <table>
-                    <tr>
-                        <th>选择</th>
-                        <th>商品名称</th>
-                        <th>出版地点</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="proId" value="1"/></td>
-                        <td><input type="text" name="proName" value="Java基础教程"/></td>
-                        <td><input type="text" name="proAddress" value="北京"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="proId" value="2"/></td>
-                        <td><input type="text" name="proName" value="Java web案例教程"/></td>
-                        <td><input type="text" name="proAddress" value="上海"/></td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox" name="proId" value="3"/></td>
-                        <td><input type="text" name="proName" value="SSM实践"/></td>
-                        <td><input type="text" name="proAddress" value="长沙"/></td>
-                    </tr>
-                </table>
-                <label>
-                    <input type="submit" value="提交" class="btn btn-block btn-success"/>
-                </label>
-            </form>
-        </div>
-    </div>
-</div>
+<form id="products">
+    <table border="1">
+        <tr>
+            <th>商品id</th>
+            <th>商品名称</th>
+            <th>提交</th>
+        </tr>
+        <tr>
+            <td>
+                <input name="proId" value="1" id="proId" type="text">
+            </td>
+            <td><input name="proName" value="三文鱼"
+                       id="proName" type="text"></td>
+            <td><input type="button" value="提交单个商品"
+                       onclick="sumbmitProduct()"></td>
+        </tr>
+        <tr>
+            <td><input name="proId" value="2" id="proId2"
+                       type="text"></td>
+            <td><input name="proName" value="红牛"
+                       id="proName2" type="text"></td>
+            <td><input type="button" value="提交多个商品"
+                       onclick="submitProducts()"></td>
+        </tr>
+        <tr>
+            <td><input name="proId" value="3" id="proId3"
+                       type="text"></td>
+            <td><input name="proName" value="王老吉"
+                       id="proName3" type="text"></td>
+            <td><input type="button" value="提交多个商品"
+                       onclick="submitProducts()"></td>
+        </tr>
+    </table>
+</form>
+<script type="text/javascript">
+    function sumbmitProduct() {
+        var proId = $("#proId").val();
+        var proName = $("#proName").val();
+        $.ajax({
+            url: "${pageContext.request.contextPath }/getProduct",
+            type: "post",
+            data: JSON.stringify({proId: proId, proName: proName}),
+            contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            success: function (response) {
+                alert(response);
+            }
+        });
+    }
+
+    function submitProducts() {
+        var pro1 = {proId: $("#proId").val(), proName: $("#proName").val()}
+        var pro2 = {proId: $("#proId2").val(), proName: $("#proName2").val()}
+        var pro3 = {proId: $("#proId3").val(), proName: $("#proName3").val()}
+        $.ajax({
+            url: "${pageContext.request.contextPath }/getProductList",
+            type: "post",
+            data: JSON.stringify([pro1, pro2,pro3]),
+            contentType: "application/json;charset=UTF-8",
+            dataType: "json",
+            success: function (response) {
+                alert(response);
+            }
+        });
+    }
+</script>
 </body>
 </html>
+
