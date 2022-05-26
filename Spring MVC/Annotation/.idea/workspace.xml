@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="39bac5f8-b2ce-4a4c-91ca-d665085c4d6b" name="变更" comment="Connect">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/controller/MethodController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/cshbxy/controller/ParamsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/editUser.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/user/editUser.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-04" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2022-05-04" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/_/SESSIONS.ser" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bindResponse/src/main/java/com/cshbxy/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bindResponse/src/main/java/com/cshbxy/pojo/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bindResponse/src/main/java/com/cshbxy/pojo/BookDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bindResponse/src/main/java/com/cshbxy/pojo/BookDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../bindResponse/src/main/webapp/Book.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,15 +40,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Java EE/Spring MVC/Annotation/src/main"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Java EE/Spring MVC/Annotation/src/main&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Java EE\Spring MVC\Annotation\src\main" />
@@ -92,6 +90,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651630550513</updated>
       <workItem from="1651630551833" duration="2948000" />
+      <workItem from="1653468171614" duration="7000" />
     </task>
     <task id="LOCAL-00001" summary="2022-05-04">
       <created>1651630773752</created>
