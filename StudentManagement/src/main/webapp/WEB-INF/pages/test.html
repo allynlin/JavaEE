@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>修改学生信息</title>
+	<link href="../../css/white-pink.css" rel="stylesheet" type="text/css">
+	<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
+	<script src="../../js/bootstrap.js"></script>
+	<script src="../../js/jquery-3.6.0.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 white-pink" style="margin-top: 20px">
+			<h1>修改学生信息</h1>
+			<form method="post" action="${pageContext.request.contextPath}/student/updateStudent">
+				<label>
+					<span>姓名：</span>
+					<input type="text" name="username" id="username">
+				</label>
+				<label>
+					<span>年龄：</span>
+					<input type="number" name="age" id="age">
+				</label>
+				<label>
+					<span>班级：</span>
+					<input type="text" name="userclass" id="userclass">
+				</label>
+				<label class="text-center">
+					<input class="btn btn-success" type="submit" value="修改">
+				</label>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>
