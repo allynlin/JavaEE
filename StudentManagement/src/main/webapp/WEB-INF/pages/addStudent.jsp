@@ -24,7 +24,7 @@
             <form method="post" action="${pageContext.request.contextPath}/student/addStudent">
                 <label id="userphoto">
                     <span>头像：</span>
-                    <input id="chkFile" name="userphoto" onchange="previewFile()" type="file">
+                    <input id="pimage" name="pimage" onchange="previewFile()" type="file">
                 </label>
                 <!--            用于显示上传图片的预览图-->
                 <div id="photo" style="text-align: center">
@@ -53,56 +53,30 @@
 </html>
 <script>
     function previewFile() {
-        //获取显示图片对象
+        // 获取显示图片对象
         let preview = document.getElementById("showImg");   // 通过元素节点查找： document.querySelector('img');
-        //获取选中图片对象（包含文件的名称、大小、类型等，如file.size）
-        let file = document.getElementById("chkFile").files[0];   //document.querySelector('input[type=file]').files[0];
-        //声明js的文件流
+        // 获取选中图片对象（包含文件的名称、大小、类型等，如file.size）
+        let file = document.getElementById("pimage").files[0];   //document.querySelector('input[type=file]').files[0];
+        // 获取文件的名称
+        // let fileName = file.name;
+        // console.log(fileName);
+        // 获取文件的后缀名
+        // let fileSuffix = fileName.substring(fileName.lastIndexOf(".") + 1);
+        // console.log(fileSuffix);
+        // 声明js的文件流
         let reader = new FileReader();
         if (file) {
-            //通过文件流将文件转换成Base64字符串
+            // 通过文件流将文件转换成Base64字符串
             reader.readAsDataURL(file);
-            //转换成功后
+            // 转换成功后
             reader.onloadend = function () {
-                //将转换结果赋值给img标签
+                // 将转换结果赋值给img标签
                 preview.src = reader.result;
-                //输出结果
+                // 输出结果
                 // console.log(reader.result);
-                //输出结果在多行文本框中
+                // 输出结果在多行文本框中
                 // document.getElementById("showText").value = reader.result;
             }
         }
     }
-
-    // 通过Ajax将base64字符串发送到服务器
-    function upload() {
-        //获取文件对象
-        let file = document.getElementById("chkFile").files[0];
-        //声明js的文件流
-        let reader = new FileReader();
-        if (file) {
-            //通过文件流将文件转换成Base64字符串
-            reader.readAsDataURL(file);
-            //转换成功后
-            reader.onloadend = function () {
-                //将转换结果赋值给img标签
-                let base64 = reader.result;
-                // console.log(base64);
-                //输出结果在多行文本框中
-                // document.getElementById("showText").value = reader.result;
-                // 发送base64字符串到服务器
-                $.ajax({
-                    url: "${pageContext.request.contextPath}/student/addStudent",
-                    type: "post",
-                    data: {
-                        "base64": base64
-                    },
-                    success: function (data) {
-                        console.log(data);
-                    }
-                });
-            }
-        }
-    }
-
 </script>

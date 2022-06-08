@@ -12,8 +12,9 @@ import org.springframework.stereotype.Service;
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
-    @Override
-    public User login(User user) {
+
+  @Override
+  public User login(User user) {
         return userMapper.login(user);
     }
 }

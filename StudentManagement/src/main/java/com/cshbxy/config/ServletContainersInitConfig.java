@@ -7,10 +7,10 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  */
 public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatcherServletInitializer {
 
-    @Override
-    protected Class<?>[] getRootConfigClasses() {
-        return new Class[]{SpringConfig.class};
-    }
+  @Override
+  protected Class<?>[] getRootConfigClasses() {
+    return new Class[] {SpringConfig.class};
+  }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {

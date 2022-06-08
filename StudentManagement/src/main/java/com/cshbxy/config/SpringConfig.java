@@ -16,10 +16,10 @@ import javax.sql.DataSource;
 @ComponentScan("com.cshbxy.service")
 @EnableTransactionManagement
 public class SpringConfig {
-    @Bean("transactionManager")
-    public DataSourceTransactionManager getDataSourceTxManager(@Autowired DataSource dataSource) {
-        DataSourceTransactionManager dtm=new DataSourceTransactionManager();
-        dtm.setDataSource(dataSource);
-        return dtm;
-    }
+  @Bean("transactionManager")
+  public DataSourceTransactionManager getDataSourceTxManager(@Autowired DataSource dataSource) {
+    DataSourceTransactionManager dtm = new DataSourceTransactionManager();
+    dtm.setDataSource(dataSource);
+    return dtm;
+  }
 }

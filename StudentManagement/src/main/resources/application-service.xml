@@ -5,25 +5,4 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
     <!--    开启注解扫描-->
     <context:component-scan base-package="com.cshbxy.mapper"/>
-    <!--        &lt;!&ndash;    配置注解驱动&ndash;&gt;-->
-    <!--        <mvc:annotation-driven/>-->
-    <!--        &lt;!&ndash;    配置视图解析器&ndash;&gt;-->
-    <!--        <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
-    <!--            <property name="prefix" value="/WEB-INF/pages/"/>-->
-    <!--            <property name="suffix" value=".jsp"/>-->
-    <!--        </bean>-->
-    <!--        &lt;!&ndash;    配置拦截器&ndash;&gt;-->
-    <!--        <mvc:interceptors>-->
-    <!--            <mvc:interceptor>-->
-    <!--                &lt;!&ndash; 拦截所有mvc控制器 &ndash;&gt;-->
-    <!--                <mvc:mapping path="/**"/>-->
-    <!--                &lt;!&ndash; mvc:exclude-mapping不拦截的请求url地址了 &ndash;&gt;-->
-    <!--&lt;!&ndash;                不拦截login.jsp&ndash;&gt;-->
-    <!--                <mvc:exclude-mapping path="/login.jsp"/>-->
-    <!--                <bean class="com.cshbxy.interceptor.ResourcesInterceptor"/>-->
-    <!--            </mvc:interceptor>-->
-    <!--        </mvc:interceptors>-->
-    <!--        &lt;!&ndash;    在访问静态资源的时候，放行&ndash;&gt;-->
-    <!--        <mvc:resources mapping="/js/**" location="/js/"/>-->
-    <!--        <mvc:resources mapping="/css/**" location="/css/"/>-->
 </beans>

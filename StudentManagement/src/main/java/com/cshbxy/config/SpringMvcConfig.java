@@ -12,16 +12,21 @@ import org.springframework.web.servlet.config.annotation.*;
 @ComponentScan({"com.cshbxy.controller"})
 @EnableWebMvc
 public class SpringMvcConfig implements WebMvcConfigurer {
-    @Override
-    public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer){
-        configurer.enable();
-    }
-    @Override
-    public void configureViewResolvers(ViewResolverRegistry registry){
-        registry.jsp("/WEB-INF/pages/",".jsp");
-    }
-    @Override
-    public void addInterceptors(InterceptorRegistry registry){
-        registry.addInterceptor(new ResourcesInterceptor()).addPathPatterns("/**").excludePathPatterns("/css/**","/js/**");
-    }
+  @Override
+  public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
+    configurer.enable();
+  }
+
+  @Override
+  public void configureViewResolvers(ViewResolverRegistry registry) {
+    registry.jsp("/WEB-INF/pages/", ".jsp");
+  }
+
+  @Override
+  public void addInterceptors(InterceptorRegistry registry) {
+    registry
+        .addInterceptor(new ResourcesInterceptor())
+        .addPathPatterns("/**")
+        .excludePathPatterns("/css/**", "/js/**", "/images/**");
+  }
 }
