@@ -11,7 +11,7 @@ public class Student implements Serializable {
   private int age;
   private String userclass;
 
-  private String pimage;
+  private String filename;
 
   public int getId() {
     return id;
@@ -45,11 +45,30 @@ public class Student implements Serializable {
     this.userclass = userclass;
   }
 
-  public String getPimage() {
-    return pimage;
+  public String getFilename() {
+    return filename;
   }
 
-  public void setPimage(String pimage) {
-    this.pimage = pimage;
+  public void setFilename(String filename) {
+    this.filename = filename;
+  }
+
+  @Override
+  public String toString() {
+    return "Student{"
+        + "id="
+        + id
+        + ", username='"
+        + username
+        + '\''
+        + ", age="
+        + age
+        + ", userclass='"
+        + userclass
+        + '\''
+        + ", filename='"
+        + filename
+        + '\''
+        + '}';
   }
 }

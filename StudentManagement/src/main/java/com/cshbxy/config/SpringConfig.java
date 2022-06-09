@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import javax.sql.DataSource;
 
@@ -21,5 +22,10 @@ public class SpringConfig {
     DataSourceTransactionManager dtm = new DataSourceTransactionManager();
     dtm.setDataSource(dataSource);
     return dtm;
+  }
+  @Bean("multipartResolver")
+  public CommonsMultipartResolver getMultipartResolver() {
+    CommonsMultipartResolver commonsMultipartResolver=new CommonsMultipartResolver();
+    return commonsMultipartResolver;
   }
 }

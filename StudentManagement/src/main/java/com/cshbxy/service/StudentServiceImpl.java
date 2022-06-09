@@ -46,23 +46,16 @@ public class StudentServiceImpl implements StudentService {
   }
 
   @Override
-  public String addStudent(Student student) {
+  public int addStudent(Student student) {
     String sql =
-        "insert into studentmanagement.student(username,age,userclass,pimage) values(?,?,?,?)";
+        "insert into studentmanagement.student(username,age,userclass,filename) values(?,?,?,?)";
     int result =
         jdbcTemplate.update(
             sql,
             new Object[] {
-              student.getUsername(), student.getAge(), student.getUserclass(), student.getPimage()
+              student.getUsername(), student.getAge(), student.getUserclass(), student.getFilename()
             });
-    String res;
-    if (result == 1) {
-      res = "添加成功,您添加的学生是：" + student.getUsername();
-      //            return student.getId();
-    } else {
-      res = "添加失败";
-    }
-    return res;
+    return result;
   }
 
   @Override
@@ -78,10 +71,15 @@ public class StudentServiceImpl implements StudentService {
             + student.getUserclass()
             + "的学生");
     String sql =
-        "update studentmanagement.student set username = ?,age = ?,userclass = ? where id = ?";
+        "update studentmanagement.student set username = ?,age = ?,userclass = ?,filename=? where id = ?";
     int result =
         jdbcTemplate.update(
-            sql, student.getUsername(), student.getAge(), student.getUserclass(), student.getId());
+            sql,
+            student.getUsername(),
+            student.getAge(),
+            student.getUserclass(),
+            student.getFilename(),
+            student.getId());
     return result;
   }
 

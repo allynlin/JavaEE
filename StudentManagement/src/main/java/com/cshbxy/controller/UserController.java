@@ -36,17 +36,11 @@ public class UserController {
       //            System.out.println(u);
       if (u != null) {
         request.getSession().setAttribute("USER_SESSION", u);
-        request.setAttribute("msg", "success");
-        // 跳转到main.jsp
         return "main";
       }
-      request.setAttribute("msg", "failed");
-      // 跳转到login.jsp
       return "login";
     } catch (Exception e) {
       e.printStackTrace();
-      request.setAttribute("msg", "system error");
-      // 跳转到login.jsp
       return "login";
     }
   }
