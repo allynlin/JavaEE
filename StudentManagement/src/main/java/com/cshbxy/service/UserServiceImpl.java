@@ -13,8 +13,8 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserMapper userMapper;
 
-  @Override
-  public User login(User user) {
+  public
+  @Override User login(User user) {
         return userMapper.login(user);
     }
 }

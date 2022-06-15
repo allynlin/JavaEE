@@ -1,5 +1,6 @@
 package com.cshbxy.controller;
 
+import com.cshbxy.mapper.StudentMapper;
 import com.cshbxy.pojo.Student;
 import com.cshbxy.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.IOException;
@@ -21,8 +21,11 @@ import java.util.UUID;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
+
   @Autowired private StudentService studentService;
-  @Resource private StudentService bean;
+
+//  @Autowired private StudentService studentService;
+//  @Resource private StudentService bean;
 
   @RequestMapping("/findStudentsByName")
   @ResponseBody
@@ -30,7 +33,8 @@ public class StudentController {
     // 处理中文乱码
     response.setCharacterEncoding("utf-8");
     response.setHeader("content-type", "text/html;charset=utf-8");
-    return bean.findStudentsByName(username);
+//    return bean.findStudentsByName(username);
+    return studentService.findStudentsByName(username);
   }
 
   @RequestMapping("/addStudent")
@@ -40,7 +44,8 @@ public class StudentController {
     // 处理中文乱码
     response.setCharacterEncoding("utf-8");
     response.setHeader("content-type", "text/html;charset=utf-8");
-    return bean.addStudent(student);
+//    return bean.addStudent(student);
+    return studentService.addStudent(student);
   }
 
   @RequestMapping("/addPhoto")
@@ -74,7 +79,7 @@ public class StudentController {
     // 处理中文乱码
     response.setCharacterEncoding("utf-8");
     response.setHeader("content-type", "text/html;charset=utf-8");
-    int result = bean.updateStudent(student);
+    int result = studentService.updateStudent(student);
     System.out.println(result);
     return result;
   }
@@ -85,7 +90,7 @@ public class StudentController {
     // 处理中文乱码
     response.setCharacterEncoding("utf-8");
     response.setHeader("content-type", "text/html;charset=utf-8");
-    int result = bean.deleteStudent(id);
+    int result = studentService.deleteStudent(id);
     System.out.println(result);
     return result;
   }
