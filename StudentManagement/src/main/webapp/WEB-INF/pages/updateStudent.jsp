@@ -10,10 +10,12 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>修改学生信息</title>
-    <link href="../../css/white-pink.css" rel="stylesheet" type="text/css">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="../../js/jquery-3.6.0.js"></script>
+    <script src="../../js/bootstrap.js"></script>
+    <title>修改学生</title>
     <style>
         #toast {
             display: none;
@@ -29,65 +31,82 @@
     </style>
 </head>
 <body>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="../../icon/person-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            学生管理系统
+            <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
+        </a>
+    </div>
+</nav>
 <div class="container">
-    <div class="row">
-        <div class="col-md-4 white-pink" style="margin-top: 20px">
-            <form method="post" id="ph" enctype="multipart/form-data"
-                  action="">
-                <!--            用于显示上传图片的预览图-->
-                <div id="photo" style="text-align: center;margin-bottom: 10px">
-                    <img alt="" id="showImg" src="" style="border-radius: 6px;" width="100%">
-                </div>
-                <label id="userphoto">
-                    <span>头像：</span>
-                    <input id="pimage" name="pimage" onchange="previewFile()" type="file">
-                </label>
-                <label class="text-center" style="display: none">
-                    <input class="btn btn-success" type="submit" value="添加">
-                </label>
-            </form>
-        </div>
-        <div class="col-md-4 white-pink" style="margin-top: 20px">
-            <h1>修改学生信息</h1>
-            <form method="post" id="updateStu" action="">
-                <label style="display:none;">
-                    <span>文件名：</span>
-                    <input type="text" name="filename" id="filename">
-                </label>
-                <label>
-                    <span>ID：</span>
-                    <input type="number" name="id" id="id">
-                </label>
-                <label>
-                    <span>姓名：</span>
-                    <input type="text" name="username" id="username">
-                </label>
-                <label>
-                    <span>年龄：</span>
-                    <input type="number" name="age" id="age">
-                </label>
-                <label>
-                    <span>班级：</span>
-                    <input type="text" name="userclass" id="userclass">
-                </label>
-                <label class="text-center">
-                    <input class="btn btn-warning" type="submit" is="search" value="修改">
-                </label>
-            </form>
-            <div class="text-center">
-                <button class="btn btn-outline-secondary" onclick="toStudentController()" type="button">返回学生查询页面
+    <div class="row" style="margin-top: 20px">
+        <div class="col-3">
+            <div class="list-group">
+                <button type="button" class="list-group-item list-group-item-action" onclick="toMain()">
+                    查找所有学生
                 </button>
-                <button class="btn btn-outline-success" onclick="toMain()" type="button">返回首页</button>
+                <button type="button" class="list-group-item list-group-item-action" onclick="toAdd()"
+                        aria-current="true">添加学生
+                </button>
+                <button type="button" class="list-group-item list-group-item-action active" disabled>修改学生</button>
             </div>
         </div>
+        <div class="col-9 table-responsive" id="tab">
+            <form method="post" id="ph" enctype="multipart/form-data"
+                  action="">
+                <div class="mb-3" id="userphoto">
+                    <label for="pimage" class="form-label">头像</label>
+                    <input class="form-control" aria-describedby="filenameHelp" type="file" name="pimage" id="pimage" onchange="previewFile()">
+                    <div id="pimageHelp" class="form-text">上传头像到服务器</div>
+                </div>
+                <!--用于显示上传图片的预览图-->
+                <div class="" id="photo">
+                    <img src="" id="showImg" class="img-thumbnail rounded mx-auto d-block" alt="该学生暂无头像" style="border-radius: 6px;max-width: 200px;">
+                </div>
+                <button style="display: none" type="submit" class="btn btn-success">添加学生</button>
+            </form>
+            <form method="post" id="updateStu" action="">
+                <div class="mb-3" style="display: none">
+                    <label for="filename" class="form-label">文件名</label>
+                    <input class="form-control" aria-describedby="filenameHelp" type="text" name="filename" id="filename">
+                    <div id="filenameHelp" class="form-text">上传到服务器的文件名（由后端返回）</div>
+                </div>
+                <div class="mb-3">
+                    <label for="id" class="form-label">ID</label>
+                    <input class="form-control" aria-describedby="emailHelp" type="number" name="id" id="id">
+                    <div id="idHelp" class="form-text">学生ID</div>
+                </div>
+                <div class="mb-3">
+                    <label for="username" class="form-label">姓名</label>
+                    <input class="form-control" aria-describedby="emailHelp" type="text" name="username" id="username">
+                    <div id="emailHelp" class="form-text">学生姓名</div>
+                </div>
+                <div class="mb-3">
+                    <label for="age" class="form-label">年龄</label>
+                    <input class="form-control" aria-describedby="ageHelp" type="number" type="number" name="age" id="age">
+                    <div id="ageHelp" class="form-text">学生年龄</div>
+                </div>
+                <div class="mb-3">
+                    <label for="userclass" class="form-label">班级</label>
+                    <input class="form-control" aria-describedby="userclassHelp" type="text" name="userclass" id="userclass">
+                    <div id="userclassHelp" class="form-text">学生班级</div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 10px">
+                    <button type="submit" class="btn btn-outline-danger" id="adSt">修改学生</button>
+                    <button type="reset" class="btn btn-outline-secondary">reset</button>
+                </div>
+            </form>
+        </div>
     </div>
-</div>
-<div id="toast">
-    <div class="container">
-        <div class="row justify-content-md-center">
-            <div class="col-md-auto align-content-center">
-                <div class="alert alert-success" role="alert" id="toasttext">
+    <div id="toast">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-md-auto align-content-center">
+                    <div class="alert alert-success" role="alert" id="toasttext">
 
+                    </div>
                 </div>
             </div>
         </div>
@@ -125,6 +144,7 @@
                 // 输出结果在多行文本框中
                 // document.getElementById("showText").value = reader.result;
             }
+            document.getElementById("photo").style.display = "block";
         }
         // $("#ph").submit();
         // 使用Ajax上传图片
@@ -207,7 +227,7 @@
                             localStorage.removeItem("userclass");
                             localStorage.removeItem("filename");
                             setTimeout(function () {
-                                window.location.href = "${pageContext.request.contextPath}/studentControl";
+                                window.location.href = "${pageContext.request.contextPath}/toMainPage";
                             }, 3000);
                         } else {
                             $("#toasttext").text("修改失败");
@@ -222,11 +242,15 @@
         });
     })
 
-    function toMain() {
-        window.location.href = "${pageContext.request.contextPath}/toMainPage";
+    function logOut() {
+        window.location.href = "${pageContext.request.contextPath}/logout";
     }
 
-    function toStudentController() {
-        window.location.href = "${pageContext.request.contextPath}/studentControl";
+    function toAdd() {
+        window.location.href = "${pageContext.request.contextPath}/adStu";
+    }
+
+    function toMain() {
+        window.location.href = "${pageContext.request.contextPath}/toMainPage";
     }
 </script>

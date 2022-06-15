@@ -33,7 +33,6 @@ public class UserController {
       是：将用户信息存入session中，并跳转到主页
       否：Request域中添加提示信息，并跳转到登录页面
        */
-      //            System.out.println(u);
       if (u != null) {
         request.getSession().setAttribute("USER_SESSION", u);
         return "main";
@@ -67,7 +66,7 @@ public class UserController {
 
   @RequestMapping("/studentControl")
   public String student_list() {
-    return "student_list";
+    return "main";
   }
 
   @RequestMapping("/adStu")
