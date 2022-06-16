@@ -143,7 +143,7 @@
                 // 再添加表格内容
                 str += '<tbody>';
                 for (var i = 0; i < data.length; i++) {
-                    str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="该学生暂未设置头像" style="border-radius: 6px;" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
+                    str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="头像加载失败" style="border-radius: 6px;max-width: 30px" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
                 }
                 str += '</tbody>';
                 str += '</table>';

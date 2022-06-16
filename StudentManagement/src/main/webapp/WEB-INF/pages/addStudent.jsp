@@ -105,7 +105,7 @@
                 <div class="mb-3" style="display: none">
                     <label for="filename" class="form-label">文件名</label>
                     <input class="form-control" aria-describedby="filenameHelp" type="text" name="filename"
-                           id="filename">
+                           id="filename" value="person-circle.svg">
                     <div id="filenameHelp" class="form-text">上传到服务器的文件名（由后端返回）</div>
                 </div>
                 <div class="mb-3">

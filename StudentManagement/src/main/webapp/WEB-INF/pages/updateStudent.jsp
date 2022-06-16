@@ -28,13 +28,14 @@
             margin: 0 auto;
             z-index: 1200;
         }
+
         .bg-drop {
             backdrop-filter: blur(20px) saturate(180%);
             -webkit-backdrop-filter: blur(20px) saturate(180%);
         }
 
-        .bg-light-1{
-            background-color: rgba(255,255,255,0.5);
+        .bg-light-1 {
+            background-color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
@@ -46,7 +47,8 @@
             学生管理系统
             <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -55,13 +57,16 @@
                     <a class="nav-link active" aria-current="page" href="#" onclick="toMain()">首页</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         学生管理
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#" onclick="toMain()">按姓名查找学生</a></li>
                         <li><a class="dropdown-item" href="#" onclick="findByClass()">按班级查找学生</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
                     </ul>
                 </li>
@@ -96,7 +101,7 @@
                 </div>
                 <!--用于显示上传图片的预览图-->
                 <div class="" id="photo">
-                    <img src="" id="showImg" class="img-thumbnail rounded mx-auto d-block" alt="该学生暂无头像"
+                    <img src="" id="showImg" class="img-thumbnail rounded mx-auto d-block" alt="该学生暂未设置头像"
                          style="border-radius: 6px;max-width: 200px;">
                 </div>
                 <button style="display: none" type="submit" class="btn btn-success">添加学生</button>
@@ -105,7 +110,7 @@
                 <div class="mb-3" style="display: none">
                     <label for="filename" class="form-label">文件名</label>
                     <input class="form-control" aria-describedby="filenameHelp" type="text" name="filename"
-                           id="filename">
+                           id="filename" value="person-circle.svg">
                     <div id="filenameHelp" class="form-text">上传到服务器的文件名（由后端返回）</div>
                 </div>
                 <div class="mb-3">
@@ -156,6 +161,7 @@
         // 读取localStorage中的filename值，并显示在页面上
         let filename = localStorage.getItem("filename");
         if (filename == null) {
+        } else if (filename == "person-circle.svg") {
         } else {
             $("#showImg").attr("src", "../../images/" + filename);
             // 将filename赋值到表单中
