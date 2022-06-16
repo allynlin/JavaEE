@@ -26,12 +26,12 @@
             width: 100%;
             height: 100%;
             margin: 0 auto;
-            z-index: 100;
+            z-index: 1200;
         }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light bg-light fixed-top">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="../../icon/person-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
@@ -39,12 +39,13 @@
         </a>
     </div>
 </nav>
-<div class="container">
+<div class="container" style="margin-top: 80px">
     <div class="row" style="margin-top: 20px">
         <div class="col-12">
             <form action="${pageContext.request.contextPath}/login" method="post" id="loginform">
                 <div class="form-floating mb-3">
-                    <input class="form-control" name="username" id="exampleFormControlInput1" placeholder="请输入你的用户名">
+                    <input class="form-control" name="username" id="exampleFormControlInput1"
+                           placeholder="请输入你的用户名">
                     <label for="exampleFormControlInput1">Account Address</label>
                 </div>
                 <div class="form-floating">

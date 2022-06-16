@@ -1,6 +1,5 @@
 package com.cshbxy.controller;
 
-import com.cshbxy.mapper.StudentMapper;
 import com.cshbxy.pojo.Student;
 import com.cshbxy.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,6 +34,15 @@ public class StudentController {
     response.setHeader("content-type", "text/html;charset=utf-8");
 //    return bean.findStudentsByName(username);
     return studentService.findStudentsByName(username);
+  }
+
+  @RequestMapping("/findStudentsByClass")
+    @ResponseBody
+    public List<Student> findStudentsByClass(HttpServletResponse response, String userclass) {
+        // 处理中文乱码
+        response.setCharacterEncoding("utf-8");
+        response.setHeader("content-type", "text/html;charset=utf-8");
+        return studentService.findStudentsByClass(userclass);
   }
 
   @RequestMapping("/addStudent")
@@ -73,6 +81,20 @@ public class StudentController {
     return "failed";
   }
 
+  @RequestMapping("/deletePhoto")
+    @ResponseBody
+    public String deletePhoto(HttpServletResponse response, String filename) {
+        // 处理中文乱码
+        response.setCharacterEncoding("utf-8");
+        response.setHeader("content-type", "text/html;charset=utf-8");
+      File file=new File("D:\\Java EE\\StudentManagement\\src\\main\\webapp\\images\\" + filename);
+        if (file.exists()) {
+            file.delete();
+            return "success";
+        }
+        return "failed";
+  }
+
   @RequestMapping("/updateStudent")
   @ResponseBody
   public int updateStudent(HttpServletResponse response, Student student) {
@@ -90,8 +112,16 @@ public class StudentController {
     // 处理中文乱码
     response.setCharacterEncoding("utf-8");
     response.setHeader("content-type", "text/html;charset=utf-8");
+    // 获取该学生的图片
+    Student student=studentService.findStudentById(id);
+    String filename=student.getFilename();
     int result = studentService.deleteStudent(id);
     System.out.println(result);
+    File file=new File("D:\\Java EE\\StudentManagement\\src\\main\\webapp\\images\\" + filename);
+    if (file.exists()) {
+      file.delete();
+      System.out.println("id为"+id+"的学生的图片删除成功");
+    }
     return result;
   }
 }

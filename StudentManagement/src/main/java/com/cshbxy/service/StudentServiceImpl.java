@@ -17,9 +17,20 @@ public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentMapper studentMapper;
 
+
+    @Override
+    public Student findStudentById(int id){
+        return studentMapper.findStudentById(id);
+    }
+
     @Override
     public List<Student> findStudentsByName(String username) {
         return studentMapper.findStudentsByName(username);
+    }
+
+    @Override
+    public List<Student> findStudentsByClass(String userclass){
+        return studentMapper.findStudentsByClass(userclass);
     }
 
     @Override

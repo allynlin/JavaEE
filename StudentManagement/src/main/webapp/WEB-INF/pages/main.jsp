@@ -26,7 +26,7 @@
             width: 100%;
             height: 100%;
             margin: 0 auto;
-            z-index: 100;
+            z-index: 1200;
         }
 
         tr {
@@ -41,30 +41,63 @@
             height: 20px;
             line-height: 20px;
         }
+
+        .bg-drop {
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+        }
+
+        .bg-light-1{
+            background-color: rgba(255,255,255,0.5);
+        }
     </style>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light-1 bg-drop">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
             <img src="../../icon/person-fill.svg" alt="" width="30" height="24" class="d-inline-block align-text-top">
             学生管理系统
             <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
         </a>
-        <form id="findStu" class="d-flex col-5" method="post" role="search"
-              action="${pageContext.request.contextPath}/student/findStudentsByName">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="username"
-                   id="username">
-            <button class="btn btn-outline-success" type="submit" id="search">Search</button>
-        </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#" onclick="toMain()">首页</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        学生管理
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#" onclick="toMain()">按姓名查找学生</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="findByClass()">按班级查找学生</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <form id="findStu" class="d-flex " method="post" role="search"
+                  action="${pageContext.request.contextPath}/student/findStudentsByName">
+                <input class="form-control me-2 form-text" type="search" placeholder="Search" aria-label="Search" name="username"
+                       id="username">
+                <button class="btn btn-outline-success" type="submit" id="search">Search</button>
+            </form>
+        </div>
     </div>
 </nav>
-<div class="container">
+<div class="container" style="margin-top: 80px">
     <div class="row" style="margin-top: 20px">
         <div class="col-3">
             <div class="list-group">
                 <button type="button" class="list-group-item list-group-item-action active" aria-current="true">
-                    查找所有学生
+                    按姓名查找学生
+                </button>
+                <button type="button" class="list-group-item list-group-item-action" onclick="findByClass()">
+                    按班级查找学生
                 </button>
                 <button type="button" class="list-group-item list-group-item-action" onclick="toAdd()">添加学生</button>
                 <button type="button" class="list-group-item list-group-item-action" disabled>修改学生</button>
@@ -110,7 +143,7 @@
                 // 再添加表格内容
                 str += '<tbody>';
                 for (var i = 0; i < data.length; i++) {
-                    str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" style="border-radius: 6px;" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
+                    str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="该学生暂未设置头像" style="border-radius: 6px;" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
                 }
                 str += '</tbody>';
                 str += '</table>';
@@ -195,5 +228,9 @@
 
     function toMain() {
         window.location.href = "${pageContext.request.contextPath}/toMainPage";
+    }
+
+    function findByClass() {
+        window.location.href = "${pageContext.request.contextPath}/findByClass";
     }
 </script>

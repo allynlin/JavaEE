@@ -78,4 +78,9 @@ public class UserController {
   public String upStu() {
     return "updateStudent";
   }
+
+    @RequestMapping("/findByClass")
+    public String findByClass() {
+        return "findStudentsByClass";
+    }
 }
