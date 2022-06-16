@@ -5,6 +5,7 @@ import com.cshbxy.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -20,6 +21,7 @@ public class UserController {
   用户登录
    */
   @RequestMapping("/login")
+  @ResponseBody
   public String login(User user, HttpServletRequest request) {
     try {
       // 查看是否接收到用户名和密码
@@ -35,12 +37,12 @@ public class UserController {
        */
       if (u != null) {
         request.getSession().setAttribute("USER_SESSION", u);
-        return "main";
+        return "success";
       }
-      return "login";
+      return "loginerror";
     } catch (Exception e) {
       e.printStackTrace();
-      return "login";
+      return "systemerror";
     }
   }
 

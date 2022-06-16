@@ -181,12 +181,16 @@
                 // 将data赋值给fileName
                 $("#filename").val(data);
                 if (data) {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-success");
                     $("#toasttext").text("图片上传成功");
                     $("#toast").fadeIn();
                     setTimeout(function () {
                         $("#toast").fadeOut();
                     }, 2000);
                 } else {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
                     $("#toasttext").text("图片上传失败");
                     $("#toast").fadeIn();
                     setTimeout(function () {
@@ -219,6 +223,8 @@
             success: function (data) {
                 // console.log(data);
                 if (data == "1") {
+                    $("#toast").removeClass();
+                    $("#toast").attr("class", "alert alert-success");
                     $("#toasttext").text("添加成功");
                     $("#toast").fadeIn();
                     setTimeout(function () {
@@ -234,6 +240,8 @@
                     // 清空表单
                     $("#myform").trigger("reset");
                 } else {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
                     $("#toasttext").text("添加失败");
                     $("#toast").fadeIn();
                     setTimeout(function () {

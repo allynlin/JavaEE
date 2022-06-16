@@ -47,8 +47,8 @@
             -webkit-backdrop-filter: blur(20px) saturate(180%);
         }
 
-        .bg-light-1{
-            background-color: rgba(255,255,255,0.5);
+        .bg-light-1 {
+            background-color: rgba(255, 255, 255, 0.5);
         }
     </style>
 </head>
@@ -60,7 +60,8 @@
             学生管理系统
             <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -69,20 +70,24 @@
                     <a class="nav-link active" aria-current="page" href="#" onclick="toMain()">首页</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
                         学生管理
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#" onclick="toMain()">按姓名查找学生</a></li>
                         <li><a class="dropdown-item" href="#" onclick="findByClass()">按班级查找学生</a></li>
-                        <li><hr class="dropdown-divider"></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
                         <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
                     </ul>
                 </li>
             </ul>
             <form id="findStu" class="d-flex " method="post" role="search"
                   action="${pageContext.request.contextPath}/student/findStudentsByName">
-                <input class="form-control me-2 form-text" type="search" placeholder="Search" aria-label="Search" name="username"
+                <input class="form-control me-2 form-text" type="search" placeholder="Search" aria-label="Search"
+                       name="username"
                        id="username">
                 <button class="btn btn-outline-success" type="submit" id="search">Search</button>
             </form>
@@ -136,19 +141,29 @@
             success: function (data) {
                 // 先清空表格
                 $("#tab").empty();
-                // 创建表格
-                let str = '<table class="table table-striped table-hover" id="Stu">';
-                // 再添加表头
-                str += '<thead><tr><th>id</th><th>姓名</th><th>头像</th><th>年龄</th><th>班级</th><th>操作</th></tr></thead>';
-                // 再添加表格内容
-                str += '<tbody>';
-                for (var i = 0; i < data.length; i++) {
-                    str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="头像加载失败" style="border-radius: 6px;max-width: 30px" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
+                if (data.length > 0) {
+                    // 创建表格
+                    let str = '<table class="table table-striped table-hover" id="Stu">';
+                    // 再添加表头
+                    str += '<thead><tr><th>id</th><th>姓名</th><th>头像</th><th>年龄</th><th>班级</th><th>操作</th></tr></thead>';
+                    // 再添加表格内容
+                    str += '<tbody>';
+                    for (var i = 0; i < data.length; i++) {
+                        str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="头像加载失败" style="border-radius: 6px;max-width: 30px" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
+                    }
+                    str += '</tbody>';
+                    str += '</table>';
+                    $("#tab").append(str);
+                    $("#tab").trigger("create");
+                } else {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
+                    $("#toasttext").text("未查询到匹配的学生");
+                    $("#toast").fadeIn();
+                    setTimeout(function () {
+                        $("#toast").fadeOut();
+                    }, 2000);
                 }
-                str += '</tbody>';
-                str += '</table>';
-                $("#tab").append(str);
-                $("#tab").trigger("create");
             }
         })
     });
@@ -171,6 +186,8 @@
                     dataType: "json",
                     success: function (data) {
                         if (data > 0) {
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-success");
                             // 删除成功
                             $("#toasttext").text("删除成功");
                             $("#toast").fadeIn();
@@ -182,6 +199,8 @@
                             console.log(index);
                             $("#tab").find("tr").eq(index).remove();
                         } else {
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-danger");
                             // 删除失败
                             $("#toasttext").text("删除失败");
                             $("#toast").fadeIn(1000);
