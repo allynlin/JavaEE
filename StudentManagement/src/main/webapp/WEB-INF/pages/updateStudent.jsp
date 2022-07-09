@@ -47,8 +47,7 @@
             学生管理系统
             <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,17 +56,22 @@
                     <a class="nav-link active" aria-current="page" href="#" onclick="toMain()">首页</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         学生管理
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#" onclick="toMain()">按姓名查找学生</a></li>
                         <li><a class="dropdown-item" href="#" onclick="findByClass()">按班级查找学生</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        管理员设置
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#" onclick="upUserPassword()">修改密码</a></li>
                     </ul>
                 </li>
             </ul>
@@ -202,12 +206,16 @@
                 // 将data赋值给fileName
                 $("#filename").val(data);
                 if (data) {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-success");
                     $("#toasttext").text("图片上传成功");
                     $("#toast").fadeIn();
                     setTimeout(function () {
                         $("#toast").fadeOut();
                     }, 2000);
                 } else {
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-danger");
                     $("#toasttext").text("图片上传失败");
                     $("#toast").fadeIn();
                     setTimeout(function () {
@@ -258,6 +266,8 @@
                     success: function (data) {
                         // console.log(data);
                         if (data > 0) {
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-success");
                             $("#toasttext").text("修改成功");
                             $("#toast").fadeIn(1000);
                             setTimeout(function () {
@@ -273,6 +283,8 @@
                                 window.location.href = "${pageContext.request.contextPath}/toMainPage";
                             }, 3000);
                         } else {
+                            $("#toasttext").removeClass();
+                            $("#toasttext").attr("class", "alert alert-danger");
                             $("#toasttext").text("修改失败");
                             $("#toast").fadeIn(1000);
                             setTimeout(function () {
@@ -299,5 +311,9 @@
 
     function findByClass() {
         window.location.href = "${pageContext.request.contextPath}/findByClass";
+    }
+
+    function upUserPassword() {
+        window.location.href = "${pageContext.request.contextPath}/upUsPa";
     }
 </script>

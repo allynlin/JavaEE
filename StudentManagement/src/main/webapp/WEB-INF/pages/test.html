@@ -7,7 +7,7 @@
 	<link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
 	<script src="../../js/jquery-3.6.0.js"></script>
 	<script src="../../js/bootstrap.js"></script>
-	<title>添加学生</title>
+	<title>修改密码</title>
 	<style>
 		#toast {
 			display: none;
@@ -57,6 +57,14 @@
 						<li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
 					</ul>
 				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						管理员设置
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+						<li><a class="dropdown-item" href="#" onclick="toMain()">修改密码</a></li>
+					</ul>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -65,60 +73,33 @@
 	<div class="row" style="margin-top: 20px">
 		<div class="col-3">
 			<div class="list-group">
-				<button type="button" class="list-group-item list-group-item-action" onclick="toMain()">
-					按姓名查找学生
+				<button type="button" class="list-group-item list-group-item-action active" onclick="toMain()">
+					修改密码
 				</button>
-				<button type="button" class="list-group-item list-group-item-action" onclick="findByClass()">
-					按班级查找学生
-				</button>
-				<button type="button" class="list-group-item list-group-item-action active" onclick="toAdd()"
-				        aria-current="true">添加学生
-				</button>
-				<button type="button" class="list-group-item list-group-item-action" disabled>修改学生</button>
 			</div>
 		</div>
 		<div class="col-9 table-responsive" id="tab">
-			<form method="post" id="ph" enctype="multipart/form-data"
-			      action="">
-				<div class="mb-3" id="userphoto">
-					<label for="pimage" class="form-label">头像</label>
-					<input class="form-control" aria-describedby="filenameHelp" type="file" name="pimage" id="pimage"
-					       onchange="previewFile()">
-					<div id="pimageHelp" class="form-text">上传头像到服务器</div>
-				</div>
-				<!--用于显示上传图片的预览图-->
-				<div class="" id="photo" style="display: none">
-					<img src="" id="showImg" class="img-thumbnail rounded mx-auto d-block" alt="..."
-					     style="border-radius: 6px;max-width: 200px;">
-				</div>
-				<button style="display: none" type="submit" class="btn btn-success">添加学生</button>
-			</form>
 			<form id="myform" method="post" action="">
-				<div class="mb-3" style="display: none">
-					<label for="filename" class="form-label">文件名</label>
-					<input class="form-control" aria-describedby="filenameHelp" type="text" name="filename"
-					       id="filename" value="person-circle.svg">
-					<div id="filenameHelp" class="form-text">上传到服务器的文件名（由后端返回）</div>
+				<div class="mb-3">
+					<label for="userid" class="form-label">用户ID</label>
+					<input class="form-control" aria-describedby="idHelp" type="number" name="userid"
+					       id="userid" disabled value="">
+					<div id="idHelp" class="form-text">当前用户ID（从服务器获取）</div>
 				</div>
 				<div class="mb-3">
-					<label for="username" class="form-label">姓名</label>
-					<input class="form-control" aria-describedby="emailHelp" type="text" name="username" id="username">
-					<div id="emailHelp" class="form-text">学生姓名</div>
+					<label for="password" class="form-label">修改密码</label>
+					<input class="form-control" aria-describedby="passwordHelp" type="password" name="password"
+					       id="password">
+					<div id="passwordHelp" class="form-text">请输入需要修改的密码</div>
 				</div>
 				<div class="mb-3">
-					<label for="age" class="form-label">年龄</label>
-					<input class="form-control" aria-describedby="ageHelp" type="number" type="number" name="age"
-					       id="age">
-					<div id="ageHelp" class="form-text">学生年龄</div>
+					<label for="password2" class="form-label">确认密码</label>
+					<input class="form-control" aria-describedby="password2Help" type="text" name="password2" id="password2">
+					<div id="password2Help" class="form-text">请再输入一遍密码确认</div>
 				</div>
-				<div class="mb-3">
-					<label for="userclass" class="form-label">班级</label>
-					<input class="form-control" aria-describedby="userclassHelp" type="text" name="userclass"
-					       id="userclass">
-					<div id="userclassHelp" class="form-text">学生班级</div>
-				</div>
+				
 				<div class="d-grid gap-2 col-6 mx-auto" style="margin-top: 10px">
-					<button type="submit" class="btn btn-outline-danger" id="adSt">添加学生</button>
+					<button type="submit" class="btn btn-outline-danger" id="adSt">修改密码</button>
 					<button type="reset" class="btn btn-outline-secondary">reset</button>
 				</div>
 			</form>

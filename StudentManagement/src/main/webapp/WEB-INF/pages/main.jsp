@@ -15,6 +15,7 @@
     <link href="../../css/bootstrap.css" rel="stylesheet" type="text/css">
     <script src="../../js/jquery-3.6.0.js"></script>
     <script src="../../js/bootstrap.js"></script>
+    <script src="../../js/template-web.js"></script>
     <title>首页</title>
     <style>
         #toast {
@@ -83,6 +84,15 @@
                         <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        管理员设置
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#" onclick="upUserPassword()">修改密码</a></li>
+                    </ul>
+                </li>
             </ul>
             <form id="findStu" class="d-flex " method="post" role="search"
                   action="${pageContext.request.contextPath}/student/findStudentsByName">
@@ -109,7 +119,37 @@
             </div>
         </div>
         <div class="col-9 table-responsive" id="tab">
-            <table class="table table-striped table-hover" id="dataList">
+            <table class="table table-striped table-hover" id="Stu">
+                <thead>
+                <tr>
+                    <th>id</th>
+                    <th>姓名</th>
+                    <th>头像</th>
+                    <th>年龄</th>
+                    <th>班级</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="tbody">
+                <script type="text/html" id="stu_list">
+                    {{each}}
+                    <tr>
+                        <td>{{$value.id}}</td>
+                        <td>{{$value.username}}</td>
+                        <td><img width="100%" alt="头像加载失败" style="border-radius: 6px;max-width: 30px"
+                                 src="{{'../../images/'+$value.filename}}"></td>
+                        <td>{{$value.age}}</td>
+                        <td>{{$value.userclass}}</td>
+                        <td>
+                            <button class="btn btn-outline-danger" id="del">删除</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-warning" id="up">修改</button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </script>
+                </tbody>
             </table>
         </div>
     </div>
@@ -140,30 +180,33 @@
             dataType: "json",
             success: function (data) {
                 // 先清空表格
-                $("#tab").empty();
-                if (data.length > 0) {
-                    // 创建表格
-                    let str = '<table class="table table-striped table-hover" id="Stu">';
-                    // 再添加表头
-                    str += '<thead><tr><th>id</th><th>姓名</th><th>头像</th><th>年龄</th><th>班级</th><th>操作</th></tr></thead>';
-                    // 再添加表格内容
-                    str += '<tbody>';
-                    for (var i = 0; i < data.length; i++) {
-                        str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="头像加载失败" style="border-radius: 6px;max-width: 30px" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
-                    }
-                    str += '</tbody>';
-                    str += '</table>';
-                    $("#tab").append(str);
-                    $("#tab").trigger("create");
-                } else {
-                    $("#toasttext").removeClass();
-                    $("#toasttext").attr("class", "alert alert-danger");
-                    $("#toasttext").text("未查询到匹配的学生");
-                    $("#toast").fadeIn();
-                    setTimeout(function () {
-                        $("#toast").fadeOut();
-                    }, 2000);
-                }
+                // $("#tab").empty();
+                console.log(data);
+                let htmlStr = template("stu_list", data);
+                $("#tbody").html(htmlStr);
+                // if (data.length > 0) {
+                //     // 创建表格
+                //     let str = '<table class="table table-striped table-hover" id="Stu">';
+                //     // 再添加表头
+                //     str += '<thead><tr><th>id</th><th>姓名</th><th>头像</th><th>年龄</th><th>班级</th><th>操作</th></tr></thead>';
+                //     // 再添加表格内容
+                //     str += '<tbody>';
+                //     for (var i = 0; i < data.length; i++) {
+                //         str += '<tr><td>' + data[i].id + '</td><td>' + data[i].username + '</td><td><img width="100%" alt="头像加载失败" style="border-radius: 6px;max-width: 30px" src="../../images/' + data[i].filename + '"</td><td>' + data[i].age + '</td><td>' + data[i].userclass + '</td><td><button class="btn btn-outline-danger" id="del">删除</button></td><td><button class="btn btn-outline-warning" id="up">修改</button></td></tr>';
+                //     }
+                //     str += '</tbody>';
+                //     str += '</table>';
+                //     $("#tab").append(str);
+                //     $("#tab").trigger("create");
+                // } else {
+                //     $("#toasttext").removeClass();
+                //     $("#toasttext").attr("class", "alert alert-danger");
+                //     $("#toasttext").text("未查询到匹配的学生");
+                //     $("#toast").fadeIn();
+                //     setTimeout(function () {
+                //         $("#toast").fadeOut();
+                //     }, 2000);
+                // }
             }
         })
     });
@@ -251,5 +294,9 @@
 
     function findByClass() {
         window.location.href = "${pageContext.request.contextPath}/findByClass";
+    }
+
+    function upUserPassword() {
+        window.location.href = "${pageContext.request.contextPath}/upUsPa";
     }
 </script>

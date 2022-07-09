@@ -65,6 +65,14 @@
                         <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
                     </ul>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        管理员设置
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#" onclick="upUserPassword()">修改密码</a></li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
@@ -223,8 +231,8 @@
             success: function (data) {
                 // console.log(data);
                 if (data == "1") {
-                    $("#toast").removeClass();
-                    $("#toast").attr("class", "alert alert-success");
+                    $("#toasttext").removeClass();
+                    $("#toasttext").attr("class", "alert alert-success");
                     $("#toasttext").text("添加成功");
                     $("#toast").fadeIn();
                     setTimeout(function () {
@@ -266,5 +274,9 @@
 
     function findByClass() {
         window.location.href = "${pageContext.request.contextPath}/findByClass";
+    }
+
+    function upUserPassword() {
+        window.location.href = "${pageContext.request.contextPath}/upUsPa";
     }
 </script>

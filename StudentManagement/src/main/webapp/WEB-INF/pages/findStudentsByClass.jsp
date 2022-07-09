@@ -60,8 +60,7 @@
             学生管理系统
             <button type="button" class="btn btn-outline-danger" onclick="logOut()">登出</button>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -70,17 +69,22 @@
                     <a class="nav-link active" aria-current="page" href="#" onclick="toMain()">首页</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                       data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         学生管理
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="#" onclick="toMain()">按姓名查找学生</a></li>
                         <li><a class="dropdown-item" href="#" onclick="findByClass()">按班级查找学生</a></li>
-                        <li>
-                            <hr class="dropdown-divider">
-                        </li>
+                        <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="#" onclick="toAdd()">添加学生</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        管理员设置
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                        <li><a class="dropdown-item" href="#" onclick="upUserPassword()">修改密码</a></li>
                     </ul>
                 </li>
             </ul>
@@ -251,5 +255,9 @@
 
     function findByClass() {
         window.location.href = "${pageContext.request.contextPath}/findByClass";
+    }
+
+    function upUserPassword() {
+        window.location.href = "${pageContext.request.contextPath}/upUsPa";
     }
 </script>

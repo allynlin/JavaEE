@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
@@ -37,6 +38,7 @@ public class UserController {
        */
       if (u != null) {
         request.getSession().setAttribute("USER_SESSION", u);
+//        return u.getId() + "";
         return "success";
       }
       return "loginerror";
@@ -44,6 +46,27 @@ public class UserController {
       e.printStackTrace();
       return "systemerror";
     }
+  }
+
+  @RequestMapping("/getUsername")
+    @ResponseBody
+    public String getUsername(HttpServletRequest request) {
+        HttpSession session = request.getSession();
+        User user = (User) session.getAttribute("USER_SESSION");
+        return user.getUsername();
+  }
+
+  @RequestMapping("/updateUserPassword")
+    @ResponseBody
+    public int updateUserPassword(HttpServletResponse response, User user) {
+    // 处理中文乱码
+    response.setCharacterEncoding("utf-8");
+    response.setHeader("content-type", "text/html;charset=utf-8");
+    System.out.println(user.getPassword());
+    System.out.println(user.getUsername());
+    int result = userService.updateUserPassword(user);
+    System.out.println(result);
+    return result;
   }
 
   @RequestMapping("/toMainPage")
@@ -84,5 +107,10 @@ public class UserController {
     @RequestMapping("/findByClass")
     public String findByClass() {
         return "findStudentsByClass";
+    }
+
+    @RequestMapping("/upUsPa")
+    public String upUsPa() {
+        return "updateUserPassword";
     }
 }
